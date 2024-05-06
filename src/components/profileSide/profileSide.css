@@ -1,0 +1,8 @@
+.profileSide{
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  overflow: auto;
+  gap:1rem;
+  padding:.8rem 0 0 .8rem;
+}

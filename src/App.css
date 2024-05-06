@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@200;300;400;600;700;800;900&family=Noto+Sans+JP:wght@600&family=Poiret+One&family=Poppins:wght@200;300;400;500;600;700;800&family=Press+Start+2P&family=Yanone+Kaffeesatz:wght@300;400;600;700&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+  user-select: none;
+}
+
+:root {
+  --black: #242d49;
+  --inputColor: rgba(40, 52, 62, 0.07);
+  --cardColor:rgba(255,255,255,0.64);
+}
+
+.app {
+  background: #f3f3f3;
+  color: var(--black);
+  overflow: hidden;
+  padding: 1rem 1rem;
+
+}
+
+.blur {
+  background: #dd105b;
+  height: 300px;
+  width: 400px;
+  border-radius: 50%;
+  position: absolute;
+  filter: blur(82px)
+}
+
+.left-blur {
+  top: 20%;
+  left: -10%;
+}
+
+.right-blur {
+  top: -21%;
+  right: 0px;
+}
