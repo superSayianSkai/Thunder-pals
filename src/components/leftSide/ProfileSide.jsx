@@ -4,7 +4,7 @@ import ProfileCard from "../profileCard/ProfileCard";
 import "./profileSide.css";
 const ProfileSide= () => {
   return (
-   <div className="profileSide">  
+   <div className="profileSide">
    <Logosearch/>
    <ProfileCard/>
    <PeopleCard/>

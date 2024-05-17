@@ -1,8 +1,13 @@
-
+import Utility from "../utilities/Utility";
+import "./RightSIde.css";
+import Trend from "../Trends/Trends";
 const RightSide = () => {
   return (
-    <div>right-side</div>
-  )
-}
+    <div className="right-side">
+      <Utility />
+      <Trend />
+    </div>
+  );
+};
 
-export default RightSide
+export default RightSide;

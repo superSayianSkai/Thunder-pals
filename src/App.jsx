@@ -1,12 +1,12 @@
 import './App.css'
 import Home from "./components/Home/Home.jsx"
+import Profile from './components/Profile/Profile.jsx'
 
 const App = () => {
   return (
     <div className="app">
-      <div className="blur left-blur"></div>
-      <div className="blur right-blur"></div>
       <Home/>
+       {/* <Profile/> */}
     </div >
   )
 }

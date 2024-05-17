@@ -1,6 +1,5 @@
 import "./peopleCard.css";
-import {Followers} from "../Data/peopleCard.js"
-
+import {Followers} from "../../Data/peopleCard"
 const PeopleCard = () => {
   return (    
     <div className="followersCard">
@@ -17,7 +16,7 @@ const PeopleCard = () => {
               <p>{follower.username}</p>
             </div>
 
-            <button>Follow</button>
+            <button className="button button-follower">Follow</button>
           </div>
         )
       })

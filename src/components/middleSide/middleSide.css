@@ -1,4 +1,18 @@
-.postSide{
+.postSide {
   display: flex;
-  justify-content:center;
-} 
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 0.5rem 0 0.1rem;
+  height: 95vh;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.new-styles {
+  border: 2px solid red;
+  width: 100%;
+}
+

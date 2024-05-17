@@ -1,11 +1,11 @@
-import ProfileSide from "../profileSide/ProfileSide"
+import ProfileSide from "../leftSide/ProfileSide"
 import MiddleSide from "../middleSide/MiddleSide"
 import RightSide from "../RightSide/RightSide"
 import "./Home.css"
 const Home = () => {
   return (
     <div className="Home">
-      <ProfileSide />
+      <ProfileSide/>
       <MiddleSide />
       <RightSide />
     </div>

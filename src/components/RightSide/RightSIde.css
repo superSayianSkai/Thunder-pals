@@ -1,0 +1,9 @@
+.right-side{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap:1rem
+}
+.button-right-side{
+    padding:.7rem 30%;
+}
