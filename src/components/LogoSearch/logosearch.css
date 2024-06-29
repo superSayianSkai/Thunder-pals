@@ -1,13 +1,17 @@
 .logoSearch {
   display: flex;
-  place-items:center;
-  gap:0.2rem;
+  justify-content:center;
+  align-items: center;
+  gap:1rem;
   margin-left:.4rem;
 
 }
+.image-container{
+  width: 40px;
+}
 
 .image-container img{
-  width: 90%;
+  width: 100%;
   border-radius: 20%;
   display: flex;
   place-items: center;
@@ -19,7 +23,7 @@
   display: flex;
   border-radius: 10px;
   background-color: var(--inputColor);
-  padding: 5px;
+  padding: .1px;
   width: 80%;
 }
 
@@ -28,21 +32,18 @@
   outline: none;
   padding: .5rem;
   background: transparent;
+  width:100%
 
 }
 
 .icon-container {
   padding: 10px;
-  background-color: #000da9;
+  background-color: var(--blue);
   border-radius: 5px;
   display: flex;
   place-items: center;
   color: #fff;
-  margin-left: -7rem;
-}
 
-.icon {
-  color: #fff;
 }
 
 .icon-container:hover {

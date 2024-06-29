@@ -1,0 +1,33 @@
+.InfoCard{
+    display: flex;
+    flex-direction: column;
+    gap:.8rem;
+    width: 90%;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color:var(--cardColor);
+}
+
+.InfoHead{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.InfoHead:hover{
+    cursor: pointer;
+}
+.info span{
+
+   margin: .1rem;
+}
+.loginOut-button{
+    align-self: flex-end;
+    width:7rem;
+  
+    margin-top:8rem;
+}
+.loginOut-button:hover{
+    background: none;
+    color:#000;
+    border: 1px solid #000;
+}

@@ -1,15 +1,21 @@
-import Posts from '../posts/Posts'
-import PostPanel from "../PostPanel/PostPanel"
-import './middleSide.css'
+import PostPanel from "../PostPanel/PostPanel";
+import Posts from "../posts/Posts";
+import "./middleSide.css";
+import AppContext from "../Global/AppContext";
+import { useContext } from "react";
+import SingleHeader from "../SingleHeader/SingleHeader";
 
-
-const MiddleSide= () => {
+const MiddleSide = () => {
+  const { thirdResize } = useContext(AppContext);
   return (
     <div className="postSide">
-      <PostPanel/>
-      <Posts/>
+        {
+          thirdResize ? <PostPanel />:<SingleHeader/>
+        }
+  
+      <Posts />
     </div>
-  )
-}
+  );
+};
 
-export default MiddleSide
+export default MiddleSide;

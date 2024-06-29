@@ -16,7 +16,7 @@ const PeopleCard = () => {
               <p>{follower.username}</p>
             </div>
 
-            <button className="button button-follower">Follow</button>
+            <button className="button button-follower text-sm">Follow</button>
           </div>
         )
       })

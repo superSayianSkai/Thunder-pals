@@ -1,118 +1,99 @@
 .profile-card {
-  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 0.25rem;
   border-radius: 1.5rem;
+  overflow-x:clip;
+   background-color: #fff;;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+}
+
+.profileImages {
+  position: relative;
   display: flex;
   flex-direction: column;
-  place-items: center;
-  gap:2rem;
-  position: relative;
-  width:15rem;
-  height:20rem;
-
-  
-}
-.banner {
-  position: relative;
-  display: flex;
   justify-content: center;
   align-items: center;
-  width:100%;
-  height: 18rem;
-  background-position:center;
-  background-size:cover;
-  border-radius: 1.5rem 1.5rem 0 0;
-  cursor: pointer;
-
+  
 }
-
-.cover {
+.profileImages > img:nth-of-type(1) {
+  border-radius:1.5rem 1.5rem 0 0;
   width: 100%;
-  cursor: pointer;
-
 }
 
-.profileImg {
-  width: 4rem;
-  border-radius: 50%;
+.profileImages > img:nth-of-type(2) {
+  bottom: -3rem;
+  box-shadow: 0px 4px 17px 2px rgba(0, 0, 0, 0.25);
   position: absolute;
-  bottom: -20px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0,0.3);
-  cursor: pointer;
+  width: 6rem;
+  border-radius: 50%;
 }
 
-
-.section2{
+.profile-info {
+  margin-top: 3rem;
   display: flex;
-  flex-direction:column;
-  place-items: center;
-  gap:1rem;
-  overflow-wrap: break-word;
-  text-align: center;
+  gap: .2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }
 
-.about{
+.people-box {
   display: flex;
   flex-direction: column;
-  place-items: center;
-  gap:.4rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
 }
-.about > h1{
-  font-size:1rem;
+.profile-info > span:nth-of-type(1){
+  font-size: 1.2rem;
 }
-.about > p{
-  font-size:.8rem;
-  max-width: 200px;
-  overflow: hidden;
+
+.profile-info > span:nth-of-type(2){
+  font-size: .8rem;
 }
-.people-box{
-  border-top:1px solid #888585;
-  border-bottom:1px solid #888585;
+
+.people-box > hr {
+  width: 85%;
+}
+.follow-card {
+  width: 80%;
   display: flex;
+  justify-content: space-around;
+  align-self: center;
+  gap: 2rem;
+}
+
+.follow {
+  display: flex;
+  gap: 0.4rem;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.people{
-  display:flex;
-  justify-content:  center;
-  align-items: center;
-  gap:3rem;
-  height:3.2rem;
-  
-}
-.people h1 {
-  font-size:.9rem;
-  font-weight: 900;
-}
-.people p{
-  font-size: .5rem;
-  color:#888585;
- 
- 
-}
-.middle-line{
-  width: 2px;
-  height:50px;
-  background-color:#888585;
-}
-
-.followers,
-.following{
-  display: flex;
-  flex-direction:column;
-  justify-content: center;
-  align-items: center;
-  gap:0.4rem;
-
-}
-.footer{
-  margin-top:.8rem;
-  height:2rem;
+.follow > span:nth-of-type(1) {
   font-weight: bold;
-  color:#000da9;
-
 }
-.footer > p{
-  margin-top:-1rem;
-  margin-bottom:.5rem;
+.follow > span:nth-of-type(2) {
+  color: grey;
+  font-size: 12px;
+}
+.middle-line {
+  height: 50px;
+  border: 1px solid grey;
+}
+.footer {
+  margin-bottom: 1rem;
+  text-align: center;
   cursor: pointer;
+}
+.footer > p {
+  font-weight: bold;
+  color: var(--blue);
 }

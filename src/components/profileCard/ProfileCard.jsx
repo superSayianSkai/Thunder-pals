@@ -1,53 +1,51 @@
-import sukuna from "../../assets/img/sukuna.jpeg"
-import itadori from "../../assets/img/itadori.jpeg"
+import sukuna from "../../assets/img/sukuna.jpeg";
+import itadori from "../../assets/img/itadori.jpeg";
+
+import { NavLink } from "react-router-dom";
 import "./profileCard.css";
 
-//*banner image
-const banner={
-  backgroundImage:`url(${sukuna})`
-};
-// *banner image
 const ProfileCard = () => {
+  const profilePage = true;
+
   return (
     <div className="profile-card">
-      <div className="banner" style={banner}>
-      <img className="profileImg" src={itadori} alt="" />
+      <div className="profileImages">
+        <img src={sukuna} alt="" />
+        <img src={itadori} alt="" />
       </div>
 
-      <div className='section2'>
+      <div className="profile-info">
+        <span>
+          <b>Sule-odu Ayotide</b>
+        </span>
+        <span>Junior Frontend Engineer</span>
+      </div>
 
-        <div className="about">
-          <h1>Kvng Aeionie!</h1>
-          <p>Machine learning and AI Engineer</p>
-          
+      <div className="people-box">
+        <hr />
+
+        <div className="follow-card">
+          <div className="follow">
+            <span>6,866</span>
+            <span>Followers</span>
+          </div>
+
+          <div className="middle-line"></div>
+
+          <div className="follow">
+            <span>1</span>
+            <span>Following</span>
+          </div>
         </div>
-
-        <div className='people-box'>
-          
-        <div className='people'>
-
-
-          <div className="followers">
-            <h1>6,866</h1>
-            <p>Followers</p>
-          </div>
-
-          <div className='middle-line'></div>
-
-          <div className="following">
-            <h1>1</h1>
-            <p>Following</p>
-          </div>
-          </div>
-
-        </div>
-
-        <div className='footer'>
+        <hr />
+      </div>
+    
+        <div className="footer">
           <p>My profile</p>
         </div>
-      </div>
+      
     </div>
-  )
-}
+  );
+};
 
-export default ProfileCard
+export default ProfileCard;

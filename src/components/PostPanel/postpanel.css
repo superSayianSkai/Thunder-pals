@@ -1,11 +1,10 @@
 .post-panel-container {
   display: flex;
+  border-bottom: 1px solid rgb(212, 205, 205);;
   justify-content: center;
-  background-color: var(--cardColor);
-  padding: 1rem;
-  border-radius: 1rem;
+  padding: 2rem 1.2rem 1.2rem 1rem;
   gap: 1rem;
-
+  background-color:#fff;;
 }
 
 .post-panel-container > img {

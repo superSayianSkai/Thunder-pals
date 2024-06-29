@@ -1,4 +1,3 @@
-import React from "react";
 import { trendings } from "../../Data/trendingData";
 import "./Trends.css";
 
@@ -16,7 +15,6 @@ const Trends = () => {
           );
         })}
       </div>
-      <button className="button-right-side">Share</button>
     </>
   );
 };

@@ -8,4 +8,7 @@ export const Followers = [
   { name: "Todd Gage", username: "@Toddgage", img: kakashi },
   { name: "Thunder Mason", username: "@Mason", img: Hinata },
   { name: "Esther", username: "@Esther", img: img5 },
+  { name: "Esther", username: "@Esther", img: img5 },
+  { name: "Esther", username: "@Esther", img: img5 },
+  { name: "Esther", username: "@Esther", img: img5 },
 ];
