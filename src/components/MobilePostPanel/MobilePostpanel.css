@@ -1,0 +1,94 @@
+.post-panel-container {
+  display: flex;
+  border-bottom: 1px solid rgb(212, 205, 205);;
+  justify-content: center;
+  padding: 2rem 1rem 1rem 1rem;
+  gap: 1rem;
+  background-color:#fff;;
+  height:100vh;
+}
+
+.MobileProfileImg {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+}
+
+.post-panel-container > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+
+  
+}
+.post-panel-container > div > input {
+  background-color: var(--inputColor);
+  border-radius: 10px;
+  padding:12rem;
+  border:none;
+  outline: none;
+}
+
+.pick-option{
+  display:flex;
+  justify-content: space-around;
+}
+
+.option{
+  padding-left: 10px;
+  padding-right:10px;
+  border-radius:10px;
+  gap:.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:1rem;
+}
+.option:hover{
+  cursor: pointer;
+}
+
+.pp-button{
+  padding:.4rem 2rem;
+}
+.pp-button:hover{
+  border: 1px solid blue;
+  color:var(--black); 
+  background: none;
+}
+
+.close{
+  z-index:1;
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(15, 20, 25, 0.75);
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  text-align: center;
+  padding: 0.3rem;
+  font-weight: 800;
+  border-radius:50%; /* Adjusted border radius */
+  cursor: pointer;
+}
+
+
+.imageDisplayBox{
+  position: relative;
+}
+
+.previewImage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:.7rem
+}
+.previewImage img{
+  width: 100%;
+  max-height: 40rem;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}

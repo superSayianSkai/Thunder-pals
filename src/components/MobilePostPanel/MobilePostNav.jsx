@@ -1,5 +1,5 @@
 
-const PostNav = ({Icon}) => {
+const MobilePostNav = ({Icon}) => {
   return (
     <div >
       <Icon className="text-2xl text-black" />
@@ -7,4 +7,4 @@ const PostNav = ({Icon}) => {
   )
 }
 
-export default PostNav
+export default MobilePostNav;
