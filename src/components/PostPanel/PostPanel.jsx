@@ -117,7 +117,7 @@ const PostPanel = ({ setPost, setShow, show }) => {
       )}
 
       <div className="w-[100%] justify-between">
-        <div className="flex w-[100%] items-center">
+        <div className="flex w-[100%] items-center justify-center">
           <img
             src={Itadori}
             alt="profile picture"
@@ -161,7 +161,7 @@ const PostPanel = ({ setPost, setShow, show }) => {
                     className="absolute top-2 right-1 bg-transparent"
                     onClick={removePicture}
                   >
-                    <MdCancel className=" text-black text-4xl cursor-pointer" />
+                    <MdCancel className=" text-black text-4xl cursor-co" />
                   </button>
                 </div>
               </>

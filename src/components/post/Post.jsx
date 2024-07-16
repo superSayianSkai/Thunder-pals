@@ -2,7 +2,6 @@ import { CiHeart } from "react-icons/ci";
 import { FaRegComment } from "react-icons/fa";
 import { RiShareForwardLine } from "react-icons/ri";
 import { CiBookmark } from "react-icons/ci";
-import { BsThreeDots } from "react-icons/bs";
 import { IoTrashOutline } from "react-icons/io5";
 import { BsPinAngle } from "react-icons/bs";
 import { PiStarFourLight } from "react-icons/pi";
@@ -17,6 +16,7 @@ import { MdBlock } from "react-icons/md";
 import { RiUserUnfollowLine } from "react-icons/ri";
 import { MdOutlineReportProblem } from "react-icons/md";
 import AppContext from "../Global/AppContext";
+import { CiMenuKebab } from "react-icons/ci";
 
 const Post = ({ data }) => {
   console.log(data);
@@ -47,17 +47,17 @@ const Post = ({ data }) => {
   console.log(visibleMenu);
   return (
     <>
-      <div className=" post py-3 pr-4 pl-4 justify-center items-center hover:bg-gray-100">
+      <div className=" post py-3 pr-2 pl-2 justify-center items-center hover:bg-gray-100 ">
         <div className="flex h-[100%] mr-1">
           <img
-            className=" rounded-full w-[40px] h-[40px]"
+            className=" rounded-full w-[40px] h-[38px]"
             src={data.profileImage}
             alt=""
           />
         </div>
 
         <div className="flex gap-1 flex-col relative">
-          <div className="flex flex-col justify-between gap-1">
+          <div className="flex flex-col justify-between gap-2">
             <div className="flex items-center pr-2 justify-between">
               <div className="flex gap-2 items-center justify-center leading-[1px]">
                 <h2 className="font-bold text-[15px]">{data.name}</h2>
@@ -68,7 +68,7 @@ const Post = ({ data }) => {
                 style={{ background: " none" }}
                 onClick={handleMenu}
               >
-                <BsThreeDots className="text-xl cursor-pointer text-black" />
+                <CiMenuKebab className="text-xl cursor-pointer text-black" />
               </button>
 
               <div
@@ -147,7 +147,11 @@ const Post = ({ data }) => {
             </p>
           </div>
           <div className="w-[100%] mt-2">
-            <img className=" rounded-2xl w-[100%]" src={data.media} alt="" />
+            <img
+              className=" rounded-2xl w-[100%]  object-auto "
+              src={data.media}
+              alt=""
+            />
           </div>
           <div className="flex items-center justify-between mt-2">
             <div className="flex items-center justify-center gap-1">
