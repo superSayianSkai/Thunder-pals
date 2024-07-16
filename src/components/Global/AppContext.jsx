@@ -8,9 +8,10 @@ export const AppProvider = ({ children }) => {
   const [thirdResize, setThirdResizeState] = useState(false);
   //posts
   const [posts, setPost] = useState(initialPostData);
+  const [showPostPanel, setShowPostPanel] = useState(false);
 
   const deletePost = (name) => {
-    setPost((prevPosts) =>prevPosts.filter((post) => post.name !== name));
+    setPost((prevPosts) => prevPosts.filter((post) => post.name !== name));
   };
 
   return (
@@ -24,7 +25,9 @@ export const AppProvider = ({ children }) => {
         setThirdResizeState,
         posts,
         setPost,
-        deletePost
+        deletePost,
+        showPostPanel,
+        setShowPostPanel,
       }}
     >
       {children}

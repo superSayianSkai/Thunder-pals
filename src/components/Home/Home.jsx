@@ -13,6 +13,7 @@ const Home = () => {
   const { firstResize, setFirstResizeState } = useContext(AppContext);
   const { secondResize, setSecondResizeState } = useContext(AppContext);
   const { thirdResize, setThirdResizeState } = useContext(AppContext);
+  const { showPostPanel, setShowPostPanel } = useContext(AppContext);
 
   useEffect(() => {
     const handleResize = () => {
@@ -31,11 +32,11 @@ const Home = () => {
 
   return (
     <div className="Home">
-      {firstResize ? <ProfileSide /> : !thirdResize ? "":<MidLeftSide />} 
-      <MiddleSide />
-      {secondResize ? <RightSide /> :""} 
-      {!thirdResize &&  <BottomNav/>}
-     
+      {firstResize ? <ProfileSide /> : !thirdResize ? "" : <MidLeftSide />}
+
+      <MiddleSide show={showPostPanel} />
+      {secondResize ? <RightSide /> : ""}
+      {!thirdResize && <BottomNav setShow={setShowPostPanel} />}
     </div>
   );
 };
