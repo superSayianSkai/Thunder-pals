@@ -34,7 +34,7 @@ const Home = () => {
     <div className="Home">
       {firstResize ? <ProfileSide /> : !thirdResize ? "" : <MidLeftSide />}
 
-      <MiddleSide show={showPostPanel} />
+      <MiddleSide show={showPostPanel} setShow={setShowPostPanel} />
       {secondResize ? <RightSide /> : ""}
       {!thirdResize && <BottomNav setShow={setShowPostPanel} />}
     </div>

@@ -1,7 +1,7 @@
 .post-panel-container {
   display: flex;
   border-bottom: 1px solid rgb(212, 205, 205);
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 2rem 1rem 0.8rem 1rem;
   gap: 1rem;
   background-color: #fff;
   height: 100vh;
@@ -91,3 +91,9 @@
 
 /* media queries */
 /* Work on the media query */
+
+@media (max-width: 650px) {
+  .post-panel-container {
+    padding: 2rem 1rem 2rem 1rem;
+  }
+}

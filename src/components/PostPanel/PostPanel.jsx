@@ -8,9 +8,10 @@ import { MdOutlineEmojiEmotions } from "react-icons/md";
 import { RiCalendarScheduleLine } from "react-icons/ri";
 import { CiLocationOn } from "react-icons/ci";
 import { MdCancel } from "react-icons/md";
+import { IoMdClose } from "react-icons/io";
 import PostNav from "./PostNav";
 
-const PostPanel = ({ setPost }) => {
+const PostPanel = ({ setPost, setShow, show }) => {
   const mediaRef = useRef();
   const textareaRef = useRef();
 
@@ -61,6 +62,7 @@ const PostPanel = ({ setPost }) => {
       alert("Please Input something");
     } else {
       setPost((prev) => [newPost, ...prev]);
+      setShow((prev) => !prev);
     }
     setNewPost({
       media: "",
@@ -79,7 +81,7 @@ const PostPanel = ({ setPost }) => {
       mediaRef.current.value = "";
     }
     if (!textareaRef.current) {
-      textareaRef.current.style.height= "20px";
+      textareaRef.current.style.height = "20px";
     }
   };
 
@@ -89,11 +91,31 @@ const PostPanel = ({ setPost }) => {
       mediaRef.current.value = "";
     }
   };
+  const removePostPanel = () => {
+    setShow((prev) => !prev);
+  };
 
   addEventListener("click", handleImage);
 
   return (
-    <div className="post-panel-container">
+    <div
+      className="post-panel-container"
+      style={{
+        position: show ? "absolute" : "",
+        height: show ? "100vh" : "",
+        zIndex: show ? "2" : "",
+        Visibility: show ? "visible" : "hidden",
+      }}
+    >
+      {show && (
+        <button
+          className="absolute top-2 right-1 bg-transparent justify-self-start"
+          onClick={removePostPanel}
+        >
+          <IoMdClose className=" text-black text-4xl cursor-pointer" />
+        </button>
+      )}
+
       <div className="w-[100%] justify-between">
         <div className="flex w-[100%] items-center">
           <img
