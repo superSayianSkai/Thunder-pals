@@ -105,6 +105,7 @@ const PostPanel = ({ setPost, setShow, show }) => {
         height: show ? "100vh" : "",
         zIndex: show ? "2" : "",
         Visibility: show ? "visible" : "hidden",
+        top:0
       }}
     >
       {show && (
