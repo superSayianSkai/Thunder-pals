@@ -6,6 +6,9 @@ import MobileIcons from "./MobileIcons";
 import { FaPlus } from "react-icons/fa";
 import { width } from "@fortawesome/free-brands-svg-icons/fa42Group";
 import { Link } from "react-router-dom";
+import { CiVideoOn } from "react-icons/ci";
+
+
 const BottomNav = ({ setShow }) => {
   const customStyles = {
     backgroundColor: "black",
@@ -20,24 +23,24 @@ const BottomNav = ({ setShow }) => {
   };
 
   return (
-    <div className="fixed w-[100%] py-3 px-2 h-[60px] justify-between items-center bg-white ed bottom-0 flex">
+    <div className="fixed w-[100%] py-3 px-2 h-[60px] justify-between items-center bg-white ed bottom-0 flex border-t-[1px] border-slate-400">
       <Link to="/">
-        <button className="bg-transparent text-black">
-          <MobileIcons Icons={GoHome} />
+        <button className="bg-transparent text-black text-2xl">
+          <GoHome className="text-3xl" />
         </button>
       </Link>
 
-      <MobileIcons Icons={MdOutlineExplore} />
+      <CiVideoOn className="text-3xl"/>
 
       <button onClick={showThePanel} className="bg-transparent">
         <MobileIcons styles={customStyles} Icons={FaPlus} />
       </button>
 
-      <MobileIcons Icons={BiMessage} />
+      <BiMessage className="text-3xl"/>
 
       <Link to="./profile">
         <button className="bg-transparent text-black">
-          <MobileIcons Icons={CgProfile} />
+          <CgProfile className="text-3xl"/>
         </button>
       </Link>
     </div>
