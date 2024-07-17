@@ -71,7 +71,7 @@
 
 .follow {
   display: flex;
-  gap: 0.4rem;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
