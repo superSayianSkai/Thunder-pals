@@ -8,7 +8,7 @@ import { PiStarFourLight } from "react-icons/pi";
 import { HiOutlineChatBubbleBottomCenter } from "react-icons/hi2";
 import { VscGraphLine } from "react-icons/vsc";
 import { FaCode } from "react-icons/fa";
-import "./post.css";
+import "../post/post.css";
 import { useState, useEffect, useRef, useContext } from "react";
 import { HiOutlineEmojiSad } from "react-icons/hi";
 import { RiVolumeMuteFill } from "react-icons/ri";
@@ -18,8 +18,8 @@ import { MdOutlineReportProblem } from "react-icons/md";
 import AppContext from "../Global/AppContext";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 
-const Post = ({ data }) => {
-  console.log(data);
+const MyPost = ({ post }) => {
+  console.log(post);
   const { deletePost } = useContext(AppContext);
 
   const specificElement = useRef(null);
@@ -51,7 +51,7 @@ const Post = ({ data }) => {
         <div className="flex h-[100%] mr-1">
           <img
             className=" rounded-full w-[40px] h-[38px]"
-            src={data.profileImage}
+            src={post.profileImage}
             alt=""
           />
         </div>
@@ -60,8 +60,8 @@ const Post = ({ data }) => {
           <div className="flex flex-col justify-between gap-2">
             <div className="flex items-center pr-2 justify-between">
               <div className="flex gap-2 items-center justify-center leading-[1px]">
-                <h2 className="font-bold text-[15px]">{data.name}</h2>
-                <p className="text-[13px] text-gray-600">{data.userName}</p>
+                <h2 className="font-bold text-[15px]">{post.name}</h2>
+                <p className="text-[13px] text-gray-600">{post.userName}</p>
               </div>
               <button
                 ref={specificElement}
@@ -75,12 +75,12 @@ const Post = ({ data }) => {
                 style={{ display: visibleMenu ? "block" : "none" }}
                 className="bg-[#ffff] px-4 py-4 rounded-xl w-[20rem] absolute right-0 top-[2px] z-10"
               >
-                {data.ownerId === "Skai" ? (
+                {post.ownerId === "Skai" ? (
                   <ul className="flex flex-col gap-5 font-bold text-sm capitalize text-black cursor-pointer">
                     <li className="flex items-center text-red-600 ">
                       <button
                         className="bg-transparent text-red-600 flex gap-2 capitalize px-0"
-                        onClick={() => deletePost(data.name)}
+                        onClick={() => deletePost(post.name)}
                       >
                         <IoTrashOutline className="text-2xl text-black text-red-600" />
                         delete
@@ -124,11 +124,11 @@ const Post = ({ data }) => {
 
                     <li className="flex gap-2 items-center">
                       <RiVolumeMuteFill className="text-xl" />
-                      Mute @{data.name}
+                      Mute @{post.name}
                     </li>
                     <li className="flex gap-2 items-center">
                       <MdBlock className="text-xl" />
-                      Block @{data.name}
+                      Block @{post.name}
                     </li>
                     <li className="flex gap-2 items-center">
                       <FaCode className="text-2xl" />
@@ -136,35 +136,35 @@ const Post = ({ data }) => {
                     </li>
                     <li className="flex gap-2 items-center">
                       <MdOutlineReportProblem className="text-2xl" />
-                      Report @{data.name}
+                      Report @{post.name}
                     </li>
                   </ul>
                 )}
               </div>
             </div>
             <p className="text-[15px] max-w-[500px] md break-words">
-              {data.desc}
+              {post.desc}
             </p>
           </div>
           <div className="w-[100%] mt-2">
             <img
               className=" rounded-2xl w-[100%]  object-auto "
-              src={data.media}
+              src={post.media}
               alt=""
             />
           </div>
           <div className="flex items-center justify-between mt-2">
             <div className="flex items-center justify-center gap-1">
               <CiHeart className="text-xl" />
-              <div>{data.likes}</div>
+              <div>{post.likes}</div>
             </div>
             <div className="flex items-center justify-center gap-1">
               <FaRegComment className="text-md" />
-              <div>{data.comments}</div>
+              <div>{post.comments}</div>
             </div>
             <div className="flex items-center gap-1 justify-center">
               <RiShareForwardLine className="text-xl" />
-              <div>{data.shares}</div>
+              <div>{post.shares}</div>
             </div>
             <div className="flex items-center justify-center  gap-1">
               <CiBookmark className="text-xl" />
@@ -172,7 +172,7 @@ const Post = ({ data }) => {
           </div>
         </div>
 
-        {/* <p>{data.likes}</p>
+        {/* <p>{post.likes}</p>
   
           */}
       </div>
@@ -180,4 +180,4 @@ const Post = ({ data }) => {
   );
 };
 
-export default Post;
+export default MyPost;

@@ -11,7 +11,8 @@ import { MdCancel } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import PostNav from "./PostNav";
 
-const PostPanel = ({ setPost, setShow, show }) => {
+const PostPanel = ({ setPost, setShowPostPanel }) => {
+  const [show, setShow] = useState(false);
   const mediaRef = useRef();
   const textareaRef = useRef();
 
@@ -62,7 +63,7 @@ const PostPanel = ({ setPost, setShow, show }) => {
       alert("Please Input something");
     } else {
       setPost((prev) => [newPost, ...prev]);
-      setShow((prev) => !prev);
+      setShowPostPanel((prev) => !prev);
     }
     setNewPost({
       media: "",
@@ -92,7 +93,7 @@ const PostPanel = ({ setPost, setShow, show }) => {
     }
   };
   const removePostPanel = () => {
-    setShow((prev) => !prev);
+    setShowPostPanel((prev) => !prev);
   };
 
   addEventListener("click", handleImage);
@@ -101,14 +102,14 @@ const PostPanel = ({ setPost, setShow, show }) => {
     <div
       className="post-panel-container"
       style={{
-        position: show ? "absolute" : "",
-        height: show ? "100vh" : "",
-        zIndex: show ? "2" : "",
-        Visibility: show ? "visible" : "hidden",
-        top:0
+        position: !show ? "absolute" : "",
+        height: !show ? "100vh" : "",
+        zIndex: !show ? "2" : "",
+        Visibility: !show ? "visible" : "hidden",
+        top: 0,
       }}
     >
-      {show && (
+      {!show && (
         <button
           className="absolute top-2 right-1 bg-transparent justify-self-start"
           onClick={removePostPanel}

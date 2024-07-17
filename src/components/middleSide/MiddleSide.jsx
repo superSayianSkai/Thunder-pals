@@ -10,11 +10,6 @@ const MiddleSide = ({ show, setShow }) => {
   return (
     <div className="postSide">
       {thirdResize ? <PostPanel setPost={setPost} /> : <SingleHeader />}
-      {show ? (
-        <PostPanel show={show} setShow={setShow} setPost={setPost} />
-      ) : (
-        ""
-      )}
       <Posts postData={posts} />
     </div>
   );

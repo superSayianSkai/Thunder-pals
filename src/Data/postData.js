@@ -5,8 +5,7 @@ import Itachi from "../assets/img/Itachi.jpg";
 import Itadori from "../assets/img/itadori.jpeg";
 import Ataru from "../assets/img/Ataru.jpg";
 import Goj from "../assets/img/Goj.jpg";
-import { Profiler } from "react";
-import { comment } from "postcss";
+
 
 export const postData = [
   {
@@ -45,15 +44,5 @@ export const postData = [
     profileImage: Goj,
     ownerId: "Julie",
   },
-  {
-    media: Itachi,
-    name: "Julie",
-    desc: "TItachi finna dust them all",
-    userName: "@julielove",
-    likes: "4k",
-    comments: "13k",
-    shares: "12k",
-    liked: true,
-    profileImage: "Itachi",
-  },
+
 ];

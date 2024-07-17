@@ -7,14 +7,12 @@ import MidLeftSide from "../midLeftSide/MidLeftSide";
 import { useEffect } from "react";
 import { useContext } from "react";
 import AppContext from "../Global/AppContext";
-import SingleHeader from "../SingleHeader/SingleHeader";
-
+import PostPanel from "../PostPanel/PostPanel";
 const Home = () => {
   const { firstResize, setFirstResizeState } = useContext(AppContext);
   const { secondResize, setSecondResizeState } = useContext(AppContext);
   const { thirdResize, setThirdResizeState } = useContext(AppContext);
   const { showPostPanel, setShowPostPanel } = useContext(AppContext);
-
   useEffect(() => {
     const handleResize = () => {
       setFirstResizeState(window.innerWidth >= 1200);
@@ -33,8 +31,7 @@ const Home = () => {
   return (
     <div className="Home">
       {firstResize ? <ProfileSide /> : !thirdResize ? "" : <MidLeftSide />}
-
-      <MiddleSide show={showPostPanel} setShow={setShowPostPanel} />
+      <MiddleSide />
       {secondResize ? <RightSide /> : ""}
       {!thirdResize && <BottomNav setShow={setShowPostPanel} />}
     </div>

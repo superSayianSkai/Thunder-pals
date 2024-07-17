@@ -54,8 +54,8 @@ const ProfileCard = ({ location }) => {
             <>
               <div className="middle-line"></div>
               <div className="follow">
-                <span>1</span>
-                <span>Following</span>
+              <span>3</span>
+              <span>Posts</span>
               </div>
             </>
           ) : (
