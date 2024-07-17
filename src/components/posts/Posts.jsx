@@ -2,6 +2,7 @@ import Post from "../post/Post";
 import "./Posts.css";
 
 const Posts = ({ postData }) => {
+  
   return (
     <div className="posts">
       {postData.map((post, id) => {

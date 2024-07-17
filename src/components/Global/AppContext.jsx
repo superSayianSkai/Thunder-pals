@@ -9,6 +9,7 @@ export const AppProvider = ({ children }) => {
   const [posts, setPost] = useState(initialPostData);
   const [showPostPanel, setShowPostPanel] = useState(false);
   const [profile,setProfile]=useState(false)
+  const [Theme,setTheTheme]=useState(false);
 
   const deletePost = (name) => {
     setPost((prevPosts) => prevPosts.filter((post) => post.name !== name));
@@ -29,7 +30,9 @@ export const AppProvider = ({ children }) => {
         showPostPanel,
         setShowPostPanel,
         profile,
-        setProfile
+        setProfile,
+        Theme,
+        setTheTheme
       }}
     >
       {children}

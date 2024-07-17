@@ -4,7 +4,7 @@ import "./middleSide.css";
 import AppContext from "../Global/AppContext";
 import { useContext } from "react";
 import SingleHeader from "../SingleHeader/SingleHeader";
-const MiddleSide = ({ show, setShow }) => {
+const MiddleSide = () => {
   const { posts, setPost, thirdResize } = useContext(AppContext);
 
   return (

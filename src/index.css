@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@200;300;400;600;700;800;900&family=Noto+Sans+JP:wght@600&family=Poiret+One&family=Poppins:wght@200;300;400;500;600;700;800&family=Press+Start+2P&family=Yanone+Kaffeesatz:wght@300;400;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+
+}
+
+
+
+@layer base{
+  :root{
+  --blue: @apply bg-blue-800;
+
+  }
+}
+
+:root {
+  --body-background:white;
+  --title:black;
+  --primary:blue;
+  --black: #242d49;
+  --red: red;
+  --orange: orange;
+  --green: green;
+  --inputColor: rgba(40, 52, 62, 0.07);
+  --cardColor: rgba(255, 255, 255, 0.64);
+}
+
+[data-theme="light"]{
+    --body-background:#f8f8f8;
+    --title:black;
+    --primary:blue;
+}
+
+[data-theme="dark"]{
+    --body-background:rgb(52,52,52)
+    --title:white;
+    --primary:rgb(97,97,225)
+}
+
+
+.app {
+  
+  color: var(--black);
+  overflow: hidden;
+  height: 100vh;
+}
+
+button {
+  display: flex;
+  place-content: center;
+  padding: 0.1rem 0.5rem;
+  color: #fff;
+  border: #fff;
+  border-radius: 5%;
+  cursor: pointer;
+}
+button:active {
+  transform: translateY(1px);
+}
+
+button {
+  @apply bg-blue-800;
+}

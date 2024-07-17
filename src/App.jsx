@@ -9,12 +9,13 @@ import PostPanel from "./components/PostPanel/PostPanel.jsx";
 // import Profile from "./components/Profile/Profile.jsx";
 
 const App = () => {
+
   const { showPostPanel, setShowPostPanel } = useContext(AppContext);
   return (
     <div className="app">
-      {showPostPanel && <PostPanel setShowPostPanel={setShowPostPanel} />}
-    <Route/>
-       {/* <Profile/> */}
+      {showPostPanel && <PostPanel showPostPanel={showPostPanel}  setShowPostPanel={setShowPostPanel} />}
+      <Route />
+      {/* <Profile/> */}
       {/* <Auth />  * */}
     </div>
   );

@@ -14,8 +14,7 @@ const Home = () => {
   const { firstResize, setFirstResizeState } = useContext(AppContext);
   const { secondResize, setSecondResizeState } = useContext(AppContext);
   const { thirdResize, setThirdResizeState } = useContext(AppContext);
-  const { showPostPanel, setShowPostPanel } = useContext(AppContext);
-  const { profile, setProfile } = useContext(AppContext);
+  const {setShowPostPanel } = useContext(AppContext);
 
   useEffect(() => {
     const handleResize = () => {
