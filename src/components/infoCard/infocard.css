@@ -17,13 +17,12 @@
     cursor: pointer;
 }
 .info span{
-
    margin: .1rem;
 }
 .loginOut-button{
     align-self: flex-end;
     width:7rem;
-  
+
     margin-top:8rem;
 }
 .loginOut-button:hover{

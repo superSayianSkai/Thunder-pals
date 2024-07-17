@@ -16,7 +16,8 @@ import { MdBlock } from "react-icons/md";
 import { RiUserUnfollowLine } from "react-icons/ri";
 import { MdOutlineReportProblem } from "react-icons/md";
 import AppContext from "../Global/AppContext";
-import { CiMenuKebab } from "react-icons/ci";
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
+
 
 const Post = ({ data }) => {
   console.log(data);
@@ -68,7 +69,7 @@ const Post = ({ data }) => {
                 style={{ background: " none" }}
                 onClick={handleMenu}
               >
-                <CiMenuKebab className="text-xl cursor-pointer text-black" />
+                <HiOutlineDotsHorizontal className="text-xl cursor-pointer text-black" />
               </button>
 
               <div

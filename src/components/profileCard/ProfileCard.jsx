@@ -8,14 +8,13 @@ const ProfileCard = ({ location }) => {
   return (
     <div
       style={{
-        paddingBottom: location === "profilePage" ? "0" : "1rem",
-        boxShadow: location ==="profilePage"? "none" : "",
-        borderRadius:location === "profilePage" ? "0":"",
-        marginBottom: location ==="profilePage"?"1rem":""
+        boxShadow: location === "profilePage" ? "none" : "",
+        borderRadius: location === "profilePage" ? "0" : "",
+        marginBottom: location === "profilePage" ? "1rem" : "",
       }}
-      className="profile-card py-0 "
+      className="profile-card"
     >
-      <div className="profileImages">
+      <div className="profileImages cursor-pointer">
         <img
           style={{
             borderRadius:
@@ -30,15 +29,13 @@ const ProfileCard = ({ location }) => {
 
       <div className="profile-info">
         <span>
-          <b>Sule-odu Ayotide</b>
+          <b>Skai.</b>
         </span>
         <span>Junior Frontend Engineer</span>
       </div>
 
       <div className="people-box">
-        <hr
-        
-        style={{width:location==="profilePage" ?"100%":""}}/>
+        <hr style={{ width: location === "profilePage" ? "100%" : "" }} />
 
         <div className="follow-card">
           <div className="follow">
@@ -65,7 +62,7 @@ const ProfileCard = ({ location }) => {
             ""
           )}
         </div>
-        <hr style={{width:location==="profilePage" ?"100%":""}} />
+        <hr style={{ width: location === "profilePage" ? "100%" : "" }} />
       </div>
       {location === "profilePage" ? (
         ""
