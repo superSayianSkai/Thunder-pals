@@ -2,14 +2,18 @@ import Logosearch from "../LogoSearch/LogoSearch";
 import PeopleCard from "../PeopleCard/PeopleCard";
 import ProfileCard from "../profileCard/ProfileCard";
 import "./profileSide.css";
-const ProfileSide= () => {
+import { useContext } from "react";
+import AppContext from "../Global/AppContext";
+import InfoCard from "../infoCard/InfoCard";
+const ProfileSide = () => {
+ 
   return (
-   <div className="profileSide">
-   <Logosearch/>
-   <ProfileCard/>
-   <PeopleCard/>
-   </div>
-  )
-}
+    <div className="profileSide">
+      <Logosearch />
+      <ProfileCard   />
+      <PeopleCard />
+    </div>
+  );
+};
 
-export default ProfileSide
+export default ProfileSide;

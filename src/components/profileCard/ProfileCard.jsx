@@ -1,16 +1,30 @@
 import sukuna from "../../assets/img/sukuna.jpeg";
 import itadori from "../../assets/img/itadori.jpeg";
+import { Link } from "react-router-dom";
 
-import { NavLink } from "react-router-dom";
 import "./profileCard.css";
 
-const ProfileCard = () => {
-  const profilePage = true;
-
+const ProfileCard = ({ location }) => {
   return (
-    <div className="profile-card">
+    <div
+      style={{
+        paddingBottom: location === "profilePage" ? "0" : "1rem",
+        boxShadow: location ==="profilePage"? "none" : "",
+        borderRadius:location === "profilePage" ? "0":"",
+        marginBottom: location ==="profilePage"?"1rem":""
+      }}
+      className="profile-card py-0 "
+    >
       <div className="profileImages">
-        <img src={sukuna} alt="" />
+        <img
+          style={{
+            borderRadius:
+              location === "profilePage" ? "0" : "1.5rem 1.5rem 0 0",
+          }}
+          src={sukuna}
+          alt=""
+        />
+
         <img src={itadori} alt="" />
       </div>
 
@@ -22,7 +36,9 @@ const ProfileCard = () => {
       </div>
 
       <div className="people-box">
-        <hr />
+        <hr
+        
+        style={{width:location==="profilePage" ?"100%":""}}/>
 
         <div className="follow-card">
           <div className="follow">
@@ -36,14 +52,30 @@ const ProfileCard = () => {
             <span>1</span>
             <span>Following</span>
           </div>
+
+          {location === "profilePage" ? (
+            <>
+              <div className="middle-line"></div>
+              <div className="follow">
+                <span>1</span>
+                <span>Following</span>
+              </div>
+            </>
+          ) : (
+            ""
+          )}
         </div>
-        <hr />
+        <hr style={{width:location==="profilePage" ?"100%":""}} />
       </div>
-    
+      {location === "profilePage" ? (
+        ""
+      ) : (
         <div className="footer">
-          <p>My profile</p>
+          <Link to="/profile">
+            <button>My profile</button>
+          </Link>
         </div>
-      
+      )}
     </div>
   );
 };

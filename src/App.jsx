@@ -8,8 +8,8 @@ const App = () => {
   return (
     <div className="app">
     <Route/>
-      {/* <Profile/>
-      <Auth />  */}
+       {/* <Profile/> */}
+      {/* <Auth />  * */}
     </div>
   );
 };

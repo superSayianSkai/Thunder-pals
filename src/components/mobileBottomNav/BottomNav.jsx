@@ -16,19 +16,30 @@ const BottomNav = ({ setShow }) => {
     height: "35px",
   };
   const showThePanel = () => {
-  setShow( (prev) => !prev);
+    setShow((prev) => !prev);
   };
 
   return (
-    <div className="fixed w-[100%] p-3 h-[60px] justify-around items-center bg-white ed bottom-0 flex ">
-      <MobileIcons Icons={GoHome} />
+    <div className="fixed w-[100%] py-3 px-2 h-[60px] justify-between items-center bg-white ed bottom-0 flex">
+      <Link to="/">
+        <button className="bg-transparent text-black">
+          <MobileIcons Icons={GoHome} />
+        </button>
+      </Link>
+
       <MobileIcons Icons={MdOutlineExplore} />
+
       <button onClick={showThePanel} className="bg-transparent">
         <MobileIcons styles={customStyles} Icons={FaPlus} />
       </button>
 
       <MobileIcons Icons={BiMessage} />
-      <MobileIcons Icons={CgProfile} />
+
+      <Link to="./profile">
+        <button className="bg-transparent text-black">
+          <MobileIcons Icons={CgProfile} />
+        </button>
+      </Link>
     </div>
   );
 };
