@@ -19,7 +19,7 @@ const Home = () => {
   useEffect(() => {
     const handleResize = () => {
       setFirstResizeState(window.innerWidth >= 1200);
-      setSecondResizeState(window.innerWidth >= 971);
+      setSecondResizeState(window.innerWidth >= 981);
       setThirdResizeState(window.innerWidth >= 490);
     };
     window.addEventListener("resize", handleResize);
