@@ -63,8 +63,7 @@ const PostPanel = ({ setPost, setShowPostPanel,showPostPanel }) => {
       alert("Please Input something");
     } else {
       setPost((prev) => [newPost, ...prev]);
-      setShowPostPanel((prev) => !prev);
-      setShow(prev=>!prev)
+      setShowPostPanel((prev)=>!prev)
     }
     setNewPost({
       media: "",
@@ -93,9 +92,9 @@ const PostPanel = ({ setPost, setShowPostPanel,showPostPanel }) => {
       mediaRef.current.value = "";
     }
   };
+  
   const removePostPanel = () => {
     setShowPostPanel((prev) => !prev);
-    setShow(prev=>!prev)
   };
 
   addEventListener("click", handleImage);
