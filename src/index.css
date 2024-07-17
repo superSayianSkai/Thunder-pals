@@ -47,8 +47,6 @@
 
 
 .app {
-  
-  color: var(--black);
   overflow: hidden;
   height: 100vh;
 }
