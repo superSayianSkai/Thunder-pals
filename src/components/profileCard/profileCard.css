@@ -46,7 +46,7 @@
 .people-box {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 0.25rem;
 }
@@ -64,7 +64,7 @@
 .follow-card {
   width: 80%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-self: center;
   gap: 2rem;
 }
