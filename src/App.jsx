@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import Auth from "../src/components/Auth/Auth";
 import ProtectedRoute from "./protectedRoute/ProtectedRoute";
 import { Navigate } from "react-router-dom";
+import Setting from "./components/Setting/Setting";
 const App = () => {
   const userToken = useSelector((state) => state.user?.userToken);
   const router = createBrowserRouter([
@@ -20,6 +21,10 @@ const App = () => {
     {
       path: "profile",
       element: <ProtectedRoute Component={Profile} />,
+    },
+    {
+      path: "setting",
+      element: <ProtectedRoute Component={Setting} />,
     },
   ]);
   return <RouterProvider router={router} />;

@@ -27,7 +27,7 @@ const PostPanel = ({ setPost, setShowPostPanel, showPostPanel }) => {
     userName: "@Aeionie",
     likes: "0",
     comments: "0",
-    shares: "0",
+    shares: "",
     liked: "false",
     profileImage: Itadori,
     ownerId: "Skai",
@@ -188,7 +188,7 @@ const PostPanel = ({ setPost, setShowPostPanel, showPostPanel }) => {
               className="text-md rounded-full py-2 px-4 opacity-75 hover:opacity-100"
               onClick={handleSubmit}
             >
-              Share
+              post
             </button>
           </div>
         </div>

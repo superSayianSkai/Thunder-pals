@@ -40,7 +40,7 @@ const Home = () => {
       {firstResize ? <ProfileSide /> : !thirdResize ? null : <MidLeftSide />}
       <MiddleSide />
       {secondResize ? <RightSide /> : null}
-      {!thirdResize && <BottomNav setShow={setShowPostPanel} />}
+    
     </div>
   );
 };

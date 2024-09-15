@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import "./profileCard.css";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import { HiOutlineDotsVertical } from "react-icons/hi";
 
 const ProfileCard = ({ location }) => {
   const [userName, setUserName] = useState("");
@@ -52,7 +53,7 @@ const ProfileCard = ({ location }) => {
       </div>
 
       <div className="people-box border-t-[1px] border-b-[1px] border-[#2F3336] border-opacity-80">
-        <div className="follow-card ">
+        <div className="follow-card py-2">
           <div className="follow">
             <span>6,866</span>
             <span>Followers</span>

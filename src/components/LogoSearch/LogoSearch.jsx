@@ -1,11 +1,14 @@
 import { CiSearch } from "react-icons/ci";
 import thunder from "../../assets/img/thunder.jpeg";
 import "./logosearch.css";
+import { Link } from "react-router-dom";
 const Logosearch = () => {
   return (
     <div className="logoSearch">
       <div className="image-container">
-        <img src={thunder} alt="eyes" />
+        <Link to="/">
+          <img src={thunder} alt="eyes" />
+        </Link>
       </div>
 
       <div className="search bg-gray-100">

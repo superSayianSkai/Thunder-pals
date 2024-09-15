@@ -7,7 +7,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 
 const BottomNav = ({ setShow }) => {
   const showThePanel = () => {
-    setShow((prev) => !prev);
+    setShow(true);
   };
 
   return (
@@ -22,7 +22,9 @@ const BottomNav = ({ setShow }) => {
 
       <FaPlus className="text-3xl" onClick={showThePanel} />
 
-      <IoSettingsOutline className="text-3xl" />
+      <Link to="/setting">
+        <IoSettingsOutline className="text-3xl" />
+      </Link>
 
       <Link to="./profile">
         <button className="bg-transparent">
