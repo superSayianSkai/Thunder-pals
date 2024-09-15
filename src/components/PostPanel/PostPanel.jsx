@@ -11,8 +11,7 @@ import { MdCancel } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import PostNav from "./PostNav";
 
-const PostPanel = ({ setPost, setShowPostPanel,showPostPanel }) => {
-
+const PostPanel = ({ setPost, setShowPostPanel, showPostPanel }) => {
   const mediaRef = useRef();
   const textareaRef = useRef();
 
@@ -20,14 +19,15 @@ const PostPanel = ({ setPost, setShowPostPanel,showPostPanel }) => {
     mediaRef.current.click();
   };
 
+  const [words, setWords] = useState("");
   const [newPost, setNewPost] = useState({
     media: "",
     name: "Skai",
     desc: "",
     userName: "@Aeionie",
-    likes: "12k",
-    comments: "12k",
-    shares: "12k",
+    likes: "0",
+    comments: "0",
+    shares: "0",
     liked: "false",
     profileImage: Itadori,
     ownerId: "Skai",
@@ -36,6 +36,7 @@ const PostPanel = ({ setPost, setShowPostPanel,showPostPanel }) => {
   const handlePost = (e) => {
     const { name, value } = e.target;
     setNewPost((prev) => ({ ...prev, [name]: value }));
+    setWords(e.target.value);
     if (textareaRef.current) {
       textareaRef.current.style.height = "20px";
       textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
@@ -63,7 +64,7 @@ const PostPanel = ({ setPost, setShowPostPanel,showPostPanel }) => {
       alert("Please Input something");
     } else {
       setPost((prev) => [newPost, ...prev]);
-      setShowPostPanel((prev)=>!prev)
+      console.log(words);
     }
     setNewPost({
       media: "",
@@ -92,22 +93,20 @@ const PostPanel = ({ setPost, setShowPostPanel,showPostPanel }) => {
       mediaRef.current.value = "";
     }
   };
-  
+
   const removePostPanel = () => {
     setShowPostPanel((prev) => !prev);
   };
 
-  addEventListener("click", handleImage);
-
   return (
     <div
-      className="post-panel-container"
+      className="post-panel-container bg-[--bg-color] text-[--primary-color] border-b-[1px] border-[#2F3336] border-opacity-55"
       style={{
         position: showPostPanel ? "absolute" : "",
         height: showPostPanel ? "100vh" : "",
         zIndex: showPostPanel ? "2" : "",
         Visibility: showPostPanel ? "visible" : "hidden",
-        top:0
+        top: 0,
       }}
     >
       {showPostPanel && (
@@ -134,7 +133,7 @@ const PostPanel = ({ setPost, setShowPostPanel,showPostPanel }) => {
               value={newPost.desc}
               placeholder="What's Thundering?"
               onChange={handlePost}
-              className="flex-1 border-2"
+              className="flex-1 border-2 bg-transparent "
               autoFocus
               style={{ height: "20px" }}
             />

@@ -1,5 +1,3 @@
-import ProfileSide from "../leftSide/ProfileSide";
-import MiddleSide from "../middleSide/MiddleSide";
 import RightSide from "../RightSide/RightSide";
 import BottomNav from "../mobileBottomNav/BottomNav";
 import "../../components/Home/Home.css";
@@ -10,11 +8,11 @@ import AppContext from "../Global/AppContext";
 import ProfileLeftSide from "../profileLeftside/ProfileLeftside";
 import ProfileMiddleSide from "../profileMiddleside/ProfileMiddleside";
 
-const Home = () => {
+const Profile = () => {
   const { firstResize, setFirstResizeState } = useContext(AppContext);
   const { secondResize, setSecondResizeState } = useContext(AppContext);
   const { thirdResize, setThirdResizeState } = useContext(AppContext);
-  const {setShowPostPanel } = useContext(AppContext);
+  const { setShowPostPanel } = useContext(AppContext);
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,7 +30,7 @@ const Home = () => {
   }, [secondResize]);
 
   return (
-    <div className="Home">
+    <div className="Home bg-[--bg-color]">
       {firstResize ? <ProfileLeftSide /> : !thirdResize ? "" : <MidLeftSide />}
 
       <ProfileMiddleSide />
@@ -42,4 +40,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Profile;

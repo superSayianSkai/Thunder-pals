@@ -1,20 +1,18 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCloudBolt } from '@fortawesome/free-solid-svg-icons'
-import { IoSettingsSharp } from "react-icons/io5";
-import { faMessage } from '@fortawesome/free-solid-svg-icons'
-import { faBell } from '@fortawesome/free-solid-svg-icons'
-import './Utility.css'
-const Utility = () => {
+import "./Utility.css";
+import { IoSettingsOutline } from "react-icons/io5";
+import { LuBell } from "react-icons/lu";
+import { IoChatboxOutline } from "react-icons/io5";
 
+import Theme from "../Theme/Theme";
+const Utility = () => {
   return (
-    <div className='utility'>
-      <FontAwesomeIcon className='font-icon2' icon={faCloudBolt} />
-      <IoSettingsSharp className='font-icon2'/>
-      <FontAwesomeIcon className='font-icon2' icon={faBell} />
-      <FontAwesomeIcon className='font-icon2' icon={faMessage} />
+    <div className="utility items-center  bg-[--bg-color] text-[--primary-color] border-[1px] border-[#2F3336] border-opacity-80">
+      <Theme />
+      <IoSettingsOutline className="font-icon2" />
+      <LuBell className="font-icon2" />
+      <IoChatboxOutline className="font-icon2" />
     </div>
-  )
-}
- 
-export default Utility
+  );
+};
+
+export default Utility;

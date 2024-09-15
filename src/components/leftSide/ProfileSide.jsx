@@ -8,7 +8,7 @@ import InfoCard from "../infoCard/InfoCard";
 const ProfileSide = () => {
  
   return (
-    <div className="profileSide">
+    <div className="profileSide h-[98svh]">
       <Logosearch />
       <ProfileCard   />
       <PeopleCard />

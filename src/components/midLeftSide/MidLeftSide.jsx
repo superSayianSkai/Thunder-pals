@@ -6,27 +6,29 @@ import { CgProfile } from "react-icons/cg";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { BiMessage } from "react-icons/bi";
 import { IoSettingsOutline } from "react-icons/io5";
-import { IoIosThunderstorm } from "react-icons/io";
-
-  
+import Theme from "../Theme/Theme";
+import { Link } from "react-router-dom";
 const MidLeftSide = () => {
-  
-
   return (
-    <div className="flex flex-col items-center gap-12 py-10">
+    <div className="utility items-center justify-start bg-[--bg-color] text-[--primary-color] border-opacity-80 flex flex-col  gap-12 py-10 ">
       <div className="image-container">
-        <img src={thunder} alt="eyes" />
+        <Link to="/">
+          <img src={thunder} alt="eyes" />
+        </Link>
       </div>
 
       <div className="flex flex-col gap-6 ">
-        <MidLeftSideIcons Icon={GoHome} />
+        <Link to="/">
+          <MidLeftSideIcons Icon={GoHome} />
+        </Link>
         <MidLeftSideIcons Icon={MdOutlineExplore} />
-        <MidLeftSideIcons Icon={CgProfile} />
+        <Link to="/profile">
+          <MidLeftSideIcons Icon={CgProfile} />
+        </Link>
         <MidLeftSideIcons Icon={BiMessage} />
         <MidLeftSideIcons Icon={IoMdNotificationsOutline} />
         <MidLeftSideIcons Icon={IoSettingsOutline} />
-       <MidLeftSideIcons Icon={IoIosThunderstorm} />
-
+        <Theme />
       </div>
     </div>
   );

@@ -1,17 +1,14 @@
-.utility{
-    margin-top: .3rem;
-    padding:1rem;
-    width: 100%;
-    display: flex;
-    font-size: 1.6rem;
-    border-radius: 0.5rem ;
-    justify-content: space-between;
-    background-color: #fff;
-    cursor: pointer;
-    border:1px solid rgb(212, 205, 205); ;
+.utility {
+  margin-top: 0.3rem;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  justify-content: space-between;
+  background-color: #fff;
+  cursor: pointer;
 }
-.font-icon2:hover{
-    color :blue;
+.font-icon2:hover {
+  color: blue;
 }
-
-

@@ -2,10 +2,7 @@ import "./peopleCard.css";
 import { Followers } from "../../Data/peopleCard";
 const PeopleCard = () => {
   return (
-    <div
-      className="followersCard"
-  
-    >
+    <div className="followersCard border-[1px] border-[#2F3336] border-opacity-55  bg-[--bg-color] text-[--primary-color]">
       <p className="followersCard-p">Who is your pal?</p>
       {Followers.map((follower, id) => {
         return (

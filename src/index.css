@@ -9,42 +9,35 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   user-select: none;
-
+  transition: all 0.1s ease-in-out;
 }
 
+/* :root {
+  --primary-color: black;
+  --bg-color: "white";
+  --secondary-color: #180161;
+}
+[data-theme="dark"] {
+  --primary-color: #fff;
+  --bg-color: black;
+  --secondary-color: #fff;
+} */
 
-
-@layer base{
-  :root{
-  --blue: @apply bg-blue-800;
-
+@layer base {
+  :root {
+    --blue: @apply bg-blue-800;
   }
 }
-
 :root {
-  --body-background:white;
-  --title:black;
-  --primary:blue;
-  --black: #242d49;
-  --red: red;
-  --orange: orange;
-  --green: green;
-  --inputColor: rgba(40, 52, 62, 0.07);
-  --cardColor: rgba(255, 255, 255, 0.64);
+  --primary-color: black;
+  --bg-color: "white";
+  --secondary-color: #black;
 }
-
-[data-theme="light"]{
-    --body-background:#f8f8f8;
-    --title:black;
-    --primary:blue;
+[data-theme="dark"] {
+  --primary-color: #fff;
+  --bg-color: black;
+  --secondary-color: #fff;
 }
-
-[data-theme="dark"]{
-    --body-background:rgb(52,52,52)
-    --title:white;
-    --primary:rgb(97,97,225)
-}
-
 
 .app {
   overflow: hidden;

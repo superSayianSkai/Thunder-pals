@@ -2,7 +2,7 @@
 const PostNav = ({Icon}) => {
   return (
     <div >
-      <Icon className="text-2xl text-black" />
+      <Icon className="text-2xl bg-[--bg-color] text-[--primary-color] " />
     </div>
   )
 }

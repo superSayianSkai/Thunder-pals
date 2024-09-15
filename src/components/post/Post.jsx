@@ -20,7 +20,7 @@ import { HiOutlineDotsHorizontal } from "react-icons/hi";
 
 const Post = ({ data }) => {
   console.log(data);
-  const { deletePost,Theme } = useContext(AppContext);
+  const { deletePost} = useContext(AppContext);
 
   const specificElement = useRef(null);
   const [visibleMenu, setVisibleMenu] = useState(false);
@@ -47,7 +47,7 @@ const Post = ({ data }) => {
   console.log(visibleMenu);
   return (
     <>
-      <div className=" post py-3 pr-2 pl-2 justify-center items-center hover:bg-gray-100" >
+      <div className="post py-3 pr-2 pl-2 justify-center items-center border-b-[1px] border-[#2F3336] border-opacity-55">
         <div className="flex h-[100%] mr-1">
           <img
             className=" rounded-full w-[40px] h-[38px]"
@@ -56,19 +56,19 @@ const Post = ({ data }) => {
           />
         </div>
 
-        <div className="flex flex-col relative">
-          <div className="flex flex-col justify-between ">
-            <div className="flex items-center pr-2 justify-between">
-              <div className="flex gap-1 items-center justify-center leading-[1px]">
-                <h2 className="font-bold text-[15px] text-[#242d49;]">{data.name}</h2>
-                <p className="text-[13px] text-gray-600">{data.userName}</p>
+        <div className="flex flex-col relative ">
+          <div className="flex flex-col justify-between">
+            <div className="flex items-center pr-2 justify-between ">
+              <div className="flex gap-1 items-center justify-center leading-[1px] text-[--secondary-color] ">
+                <h2 className="font-bold text-[15px]">{data.name}</h2>
+                <p className="text-[13px] text-gray-600 ">{data.userName}</p>
               </div>
               <button
                 ref={specificElement}
                 style={{ background: " none" }}
                 onClick={handleMenu}
               >
-                <HiOutlineDotsHorizontal className="text-xl cursor-pointer text-black" />
+                <HiOutlineDotsHorizontal className="text-xl cursor-pointer  text-[--primary-color]" />
               </button>
 
               <div
@@ -142,7 +142,7 @@ const Post = ({ data }) => {
                 )}
               </div>
             </div>
-            <p className="text-[14px] text-black max-w-[500px] md break-words">
+            <p className="text-[14px] max-w-[500px] md break-words text-[--secondary-color] ">
               {data.desc}
             </p>
           </div>

@@ -18,7 +18,6 @@ const Home = () => {
     setShowPostPanel,
   } = useContext(AppContext);
 
-
   useEffect(() => {
     const handleResize = () => {
       setFirstResizeState(window.innerWidth >= 1200);
@@ -37,7 +36,7 @@ const Home = () => {
   }, [secondResize]);
 
   return (
-    <div className="Home">
+    <div className="Home bg-[--bg-color]">
       {firstResize ? <ProfileSide /> : !thirdResize ? null : <MidLeftSide />}
       <MiddleSide />
       {secondResize ? <RightSide /> : null}

@@ -47,7 +47,7 @@ const MyPost = ({ post }) => {
   console.log(visibleMenu);
   return (
     <>
-      <div className=" post py-3 pr-2 pl-2 justify-center items-center hover:bg-gray-100 ">
+      <div className=" post py-3 pr-2 pl-2 justify-center items-center text-[--primary-color] ">
         <div className="flex h-[100%] mr-1">
           <img
             className=" rounded-full w-[40px] h-[38px]"

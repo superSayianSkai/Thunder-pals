@@ -8,11 +8,15 @@ const Logosearch = () => {
         <img src={thunder} alt="eyes" />
       </div>
 
-      <div className="search">
+      <div className="search bg-gray-100">
         <div className="icon-container">
           <CiSearch className="text-black text-2xl" />
         </div>
-        <input type="text" placeholder="#Explore" />
+        <input
+          type="text"
+          className="text-black rounded-xl bg-gray-100"
+          placeholder="#Explore"
+        />
       </div>
     </div>
   );

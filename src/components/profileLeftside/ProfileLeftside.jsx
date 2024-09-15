@@ -1,6 +1,6 @@
 import Logosearch from "../LogoSearch/LogoSearch";
 import PeopleCard from "../PeopleCard/PeopleCard";
-import ProfileCard from "../profileCard/ProfileCard";
+
 import "../leftSide/profileSide.css";
 import { useContext } from "react";
 import AppContext from "../Global/AppContext";

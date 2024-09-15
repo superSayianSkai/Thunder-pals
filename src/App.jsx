@@ -1,26 +1,28 @@
-import "./App.css";
-import Route from "./components/AppRoutes/Route.jsx";
-import AppContext from "./components/Global/AppContext.jsx";
-import { useContext } from "react";
-import PostPanel from "./components/PostPanel/PostPanel.jsx";
-
-
-// import Auth from "./components/Auth/Auth.jsx";
-// import Home from "./components/Home/Home.jsx";
-// import Profile from "./components/Profile/Profile.jsx";
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Profile from "../src/components/Profile/Profile";
+import Home from "../src/components/Home/Home";
+import { useSelector } from "react-redux";
+import Auth from "../src/components/Auth/Auth";
+import ProtectedRoute from "./protectedRoute/ProtectedRoute";
+import { Navigate } from "react-router-dom";
 const App = () => {
-  const { setPost} = useContext(AppContext);
+  const userToken = useSelector((state) => state.user?.userToken);
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <ProtectedRoute Component={Home} />,
+    },
+    {
+      path: "/login",
+      element: userToken ? <Navigate to="/" /> : <Auth />,
+    },
 
-  const { showPostPanel, setShowPostPanel } = useContext(AppContext);
-  return (
-    <div className="app">
-      {showPostPanel && <PostPanel setPost={setPost} showPostPanel={showPostPanel}  setShowPostPanel={setShowPostPanel} />}
-      <Route />
-      {/* <Profile/> */}
-      {/* <Auth />  * */}
-    </div>
-  );
+    {
+      path: "profile",
+      element: <ProtectedRoute Component={Profile} />,
+    },
+  ]);
+  return <RouterProvider router={router} />;
 };
 
 export default App;

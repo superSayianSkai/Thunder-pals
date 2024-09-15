@@ -1,24 +1,22 @@
-.trend{
-    display: flex;
-    padding:1.4rem;
-    flex-direction: column;
-    gap:.6rem;
-    height:fit-content;
-    background-color: #fff;
-    width:20rem;
-    border-radius: 1.2rem;
-    border:1px solid rgb(212, 205, 205); ;;
-
+.trend {
+  display: flex;
+  padding: 1.4rem;
+  flex-direction: column;
+  gap: 0.6rem;
+  height: fit-content;
+  background-color: #fff;
+  width: 20rem;
+  border-radius: 1.2rem;
 }
-.trend h1{
-    font-size: 1.6rem;
+.trend h1 {
+  font-size: 1.6rem;
 }
-.trend h2{
-    font-size: 1rem;
+.trend h2 {
+  font-size: 1rem;
 }
-.trend p{
-    font-size: .8rem;
+.trend p {
+  font-size: 0.8rem;
 }
-.trend button{
-    margin-top: 1.2rem;
+.trend button {
+  margin-top: 1.2rem;
 }
