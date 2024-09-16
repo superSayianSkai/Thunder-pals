@@ -50,9 +50,9 @@ const MyPost = ({ post }) => {
         style={{
           borderRight: `1px solid rgba(47, 51, 54, var(--opacity))`,
           borderLeft: `1px solid rgba(47, 51, 54, var(--opacity))`,
-          borderTop: `1px solid rgba(47, 51, 54, var(--opacity))`,
+          borderBottom: `1px solid rgba(47, 51, 54, var(--opacity))`,
         }}
-        className=" post py-3 pr-2 pl-2 justify-center items-center text-[--primawry-color] "
+        className=" post py-3 pr-2 pl-2 justify-center items-center text-[--primawry-color]"
       >
         <div className="flex h-[100%] mr-1">
           <img
