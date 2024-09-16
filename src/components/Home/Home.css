@@ -1,9 +1,8 @@
 .Home {
   display: grid;
   grid-template-columns: 20rem auto 22rem;
-  gap: 1rem;
   padding: 0 3rem 0 1rem;
-  height:100svh;
+  height: 100svh;
 }
 
 @media (max-width: 1200px) {

@@ -2,15 +2,17 @@ import Logosearch from "../LogoSearch/LogoSearch";
 import PeopleCard from "../PeopleCard/PeopleCard";
 import ProfileCard from "../profileCard/ProfileCard";
 import "./profileSide.css";
-import { useContext } from "react";
-import AppContext from "../Global/AppContext";
-import InfoCard from "../infoCard/InfoCard";
+
 const ProfileSide = () => {
- 
   return (
-    <div className="profileSide h-[98svh]">
+    <div
+      style={{
+        borderRight: `1px solid rgba(47, 51, 54, var(--opacity))`,
+      }}
+      className="profileSide h-[98svh]"
+    >
       <Logosearch />
-      <ProfileCard   />
+      <ProfileCard />
       <PeopleCard />
     </div>
   );

@@ -1,13 +1,10 @@
 .postSide {
   display: flex;
   flex-direction: column;
-  padding: 0rem 0rem 0 0rem;
   height: 100svh;
-  overflow-y: scroll; 
-
-  
+  overflow-y: scroll;
 }
-.for-you{
+.for-you {
   border-bottom: 1px solid rgb(212, 205, 205);
 }
 
@@ -20,9 +17,8 @@
   width: 100%;
 }
 
-@media (max-width:490px) {
-  .postSide{
-    height:89vh;
+@media (max-width: 490px) {
+  .postSide {
+    height: 89vh;
   }
 }
-

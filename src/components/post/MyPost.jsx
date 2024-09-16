@@ -62,7 +62,7 @@ const MyPost = ({ post }) => {
         <div className="flex gap-1 flex-col relative">
           <div className="flex flex-col justify-between gap-2">
             <div className="flex items-center pr-2 justify-between">
-              <div className="flex gap-2 items-center justify-center leading-[1px]">
+              <div className="flex gap-2 items-center justify-center leading-[1px] text-[--primary-color]">
                 <h2 className="font-bold text-[15px]">{post.name}</h2>
                 <p className="text-[13px] text-gray-600">{post.userName}</p>
               </div>
@@ -145,7 +145,7 @@ const MyPost = ({ post }) => {
                 )}
               </div>
             </div>
-            <p className="text-[15px] max-w-[500px] md break-words">
+            <p className="text-[15px] max-w-[500px] md break-words text-[--primary-color]">
               {post.desc}
             </p>
           </div>

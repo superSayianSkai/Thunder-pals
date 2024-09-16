@@ -100,7 +100,7 @@ const PostPanel = () => {
     }
   };
   return (
-    <div className="h-[100svh] bg-[--bg-color]">
+    <div className="h-[100svh] bg-[--bg-color] ">
       <div className="post-panel-container h-[40svh] text-[--primary-color] border-b-[1px] border-[#2F3336] border-opacity-55 bg-[--bg-color]">
         {
           <button

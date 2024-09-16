@@ -13,13 +13,8 @@ const MiddleSide = () => {
   return (
     <>
       <div
-        style={{
-          borderTop: 0,
-          borderLeft: `1px solid rgba(47, 51, 54, var(--opacity))`,
-          borderRight: `1px solid rgba(47, 51, 54, var(--opacity))`,
-        }}
         className="postSide
-          bg-[--bg-color]"
+          bg-[--bg-color] h-[100svh]"
       >
         {thirdResize ? <PostPanel setPost={setPost} /> : <SingleHeader />}
         <Posts postData={posts} />
