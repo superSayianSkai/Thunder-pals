@@ -1,3 +1,4 @@
+import "../infoCard/infocard.css"
 import { HiOutlinePencil } from "react-icons/hi";
 import { getAuth, signOut } from "firebase/auth";
 import { setLogOut } from "../../context/authSlice";
@@ -50,12 +51,12 @@ const InfoCard = () => {
         <HiOutlinePencil className="text-2xl" onClick={() => setOpen(true)} />
       </div>
 
-      <div className="info text-[--primary-color]">
-        <span>{userInfo.name}</span>
+      <div className="info">
+        <span className="text-[--primary-color]">{userInfo.name}</span>
       </div>
 
-      <div className="info text-[--primary-color]">
-        <span>{userInfo.userDesc}</span>
+      <div className="info ">
+        <span className="text-[--primary-color]">{userInfo.userDesc}</span>
       </div>
 
  
