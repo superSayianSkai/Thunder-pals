@@ -10,8 +10,9 @@ import { CiLocationOn } from "react-icons/ci";
 import { MdCancel } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import PostNav from "./PostNav";
-
+import { useSelector } from "react-redux";
 const PostPanel = ({ setPost, setShowPostPanel, showPostPanel }) => {
+  const userInfo = useSelector((state) => state.user);
   const mediaRef = useRef();
   const textareaRef = useRef();
 
@@ -22,9 +23,9 @@ const PostPanel = ({ setPost, setShowPostPanel, showPostPanel }) => {
   const [words, setWords] = useState("");
   const [newPost, setNewPost] = useState({
     media: "",
-    name: "Skai",
+    name: `${userInfo.name}`,
     desc: "",
-    userName: "@Aeionie",
+    userName:`${userInfo.userName}`,
     likes: "0",
     comments: "0",
     shares: "",
@@ -68,9 +69,9 @@ const PostPanel = ({ setPost, setShowPostPanel, showPostPanel }) => {
     }
     setNewPost({
       media: "",
-      name: "Skai",
+      name: `${userInfo.name}`,
       desc: "",
-      userName: "@Aeionie",
+      userName: `${userInfo.userName}`,
       likes: "12k",
       comments: "12k",
       shares: "12k",
@@ -78,7 +79,6 @@ const PostPanel = ({ setPost, setShowPostPanel, showPostPanel }) => {
       profileImage: Itadori,
       ownerId: "Skai",
     });
-
     if (mediaRef.current) {
       mediaRef.current.value = "";
     }

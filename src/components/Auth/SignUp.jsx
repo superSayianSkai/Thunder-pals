@@ -10,17 +10,22 @@ import {
   updateProfile,
 } from "firebase/auth";
 import "react-toastify/dist/ReactToastify.css";
-
+import { useNavigate } from "react-router";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../context/authSlice";
 const SignUp = ({ setChangeUp }) => {
   const auth = getAuth();
 
   //use state for app
+  const navigateTo = useNavigate("/");
+  const dispatch = useDispatch();
   const [userName, setUserName] = useState("");
   const [userEmail, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
   const [confirmPwd, setConfirmPwd] = useState("");
   const [toggleVisibility, setToggleVisisbility] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [userDesc, setUserDesc] = useState("");
 
   const handleUserName = (e) => {
     setUserName(e.target.value);
@@ -37,6 +42,9 @@ const SignUp = ({ setChangeUp }) => {
     setEmail(e.target.value);
   };
 
+  const handleUserDesc = (e) => {
+    setUserDesc(e.target.value);
+  };
   const handlePwdVisibility = () => {
     setToggleVisisbility((prev) => !prev);
   };
@@ -51,14 +59,28 @@ const SignUp = ({ setChangeUp }) => {
             displayName: userName,
             photoURL: "https://www.pinterest.com/pin/4081455904310080/",
           });
-
           console.log(userCredential);
+          const user = userCredential.user;
+          dispatch(
+            setUser({
+              _id: user.uid,
+              userName: userName,
+              userImage: "https://www.pinterest.com/pin/4081455904310080",
+              userToken: user.accessToken,
+              userDesc: userDesc,
+            })
+          );
+          console.log(user);
+
           // Signed up
           setLoading(false);
           toast.success("user Registered successfully");
           setTimeout(() => {
             setChangeUp();
           }, 3000);
+
+          navigateTo("/");
+
           // ...
         })
         .catch((error) => {
@@ -83,34 +105,43 @@ const SignUp = ({ setChangeUp }) => {
   return (
     <div className="relative">
       <form onSubmit={handleFormSubmit} className="text-black ">
-        <h1 className="font-bold text-4xl text-center mb-2 text-black">
+        <h1 className="font-bold text-4xl text-center mb-6 text-black ">
           SIGN UP
         </h1>
 
-        <div>
-          <input
-            value={userName}
-            type="text"
-            className="outline-none p-[15px] border-[1px] border-black  my-3 rounded-full text-black"
-            placeholder="Username"
-            onChange={handleUserName}
-          />
-        </div>
+        <div className="flex flex-col gap-4">
+          <div>
+            <input
+              value={userName}
+              type="text"
+              className="outline-none p-[15px] border-[1px] border-black  rounded-full text-black"
+              placeholder="Username"
+              onChange={handleUserName}
+            />
+          </div>
 
-        <div>
           <div>
             <input
               value={userEmail}
               type="text"
-              className="outline-none p-[15px] border-[1px] border-black text-black  my-3 rounded-full"
+              className="outline-none p-[15px] border-[1px] border-black text-black rounded-full"
               placeholder="Email"
               onChange={handleEmail}
+            />
+          </div>
+          <div>
+            <input
+              value={userDesc}
+              type="text"
+              className="outline-none p-[15px] border-[1px] border-black text-black rounded-full"
+              placeholder="Something short that describes you"
+              onChange={handleUserDesc}
             />
           </div>
           <div className="">
             <input
               type={toggleVisibility ? "text" : "password"}
-              className="outline-none p-[15px] border-[1px] border-black  text-black my-3 rounded-full"
+              className="outline-none p-[15px] border-[1px] border-black  text-black  rounded-full"
               value={pwd}
               placeholder="Password"
               onChange={handlePwd}
@@ -120,7 +151,7 @@ const SignUp = ({ setChangeUp }) => {
           <div>
             <input
               type={toggleVisibility ? "text" : "password"}
-              className="outline-none p-[15px] border-[1px] border-black  text-black bg-white my-3 rounded-full"
+              className="outline-none p-[15px] border-[1px] border-black  text-black bg-white  rounded-full"
               value={confirmPwd}
               placeholder="Confirm Password"
               onChange={handleConfirmPwd}

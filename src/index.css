@@ -27,17 +27,18 @@
   --shadow-blur: 12px;
   --shadow-offset-x: 0px;
   --shadow-offset-y: 4px;
+  --hover-bg-color: #f9fafb;
 }
 [data-theme="dark"] {
   --primary-color: #fff;
   --bg-color: black;
   --secondary-color: #fff;
   --opacity: 1;
-
   --shadow-color: rgba(255, 255, 255, 0.15); /* White with low opacity */
   --shadow-blur: 12px;
   --shadow-offset-x: 0px;
   --shadow-offset-y: 4px;
+  --hover-bg-color: #3333; 
 }
 
 .app {

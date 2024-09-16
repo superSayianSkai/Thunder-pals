@@ -1,23 +1,28 @@
 import "./infocard.css";
-import { FaPen } from "react-icons/fa";
+import { HiOutlinePencil } from "react-icons/hi";
 import { getAuth, signOut } from "firebase/auth";
 import { setLogOut } from "../../context/authSlice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
 import { ThreeCircles } from "react-loader-spinner";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
+import ProfileModal from "../ProfileModal/ProfileModal";
 const InfoCard = () => {
+  const userInfo = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const navigateTo = useNavigate();
   const [loading, setLoading] = useState(false);
+  const [open, setOpen] = useState(false);
   const handleLogOut = () => {
+    setLoading(true);
     const auth = getAuth();
     signOut(auth)
       .then(() => {
         dispatch(setLogOut());
         navigateTo("/");
-        setLoading(true);
+        setLoading(false);
       })
       .catch((error) => {
         console.error(error);
@@ -30,27 +35,24 @@ const InfoCard = () => {
       className="InfoCard shadow-md  bg-[--bg-color] text-[--primary-color]"
     >
       <div className="InfoHead">
-        <h4>Your Info</h4>
-        <FaPen />
+        <h4 className="font-bold text-[18px] mb-2">Your Info</h4>
+        <HiOutlinePencil className="text-2xl" onClick={() => setOpen(true)} />
       </div>
 
-      <div className="info font-bold">
-        <span>Skai</span>
+      <div className="info">
+        <span>{userInfo.userName}</span>
       </div>
 
-      <div className="info font-bold">
-        <span>Junior Frontend Engineer</span>
+      <div className="info">
+        <span>{userInfo.userDesc}</span>
       </div>
 
-      <div className="info font-bold">
-        <Link to="/">
-          <span>Home</span>
-        </Link>
-      </div>
-
-      <button onClick={handleLogOut} className="rounded-sm py-2 bg-red-600 hover:opacity-50">
+      <button
+        onClick={handleLogOut}
+        className="rounded-sm py-2 bg-blue-700 hover:opacity-50"
+      >
         {!loading ? (
-          "Log out"
+          <p>Log out</p>
         ) : (
           <ThreeCircles
             visible={true}
@@ -63,6 +65,7 @@ const InfoCard = () => {
           />
         )}
       </button>
+      {open && <ProfileModal setOpen={setOpen} />}
     </div>
   );
 };

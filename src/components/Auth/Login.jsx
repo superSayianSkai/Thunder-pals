@@ -36,19 +36,19 @@ const Login = ({ setChangeUp }) => {
             userToken: user.accessToken,
           })
         );
-
-        navigateTo("/");
         toast.success("login Successful");
         setTimeout(() => {
           setLoading(false);
         }, 2000);
+
+        navigateTo("/");
 
         // ...
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode, errorMessage);
+
         setLoading(false);
         if (errorCode === "auth/invalid-email") {
           toast.error("invalid email");
@@ -105,7 +105,6 @@ const Login = ({ setChangeUp }) => {
           </a>
         </span>
       </form>
-   
     </div>
   );
 };

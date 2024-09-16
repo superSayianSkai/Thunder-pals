@@ -17,8 +17,10 @@ import { RiUserUnfollowLine } from "react-icons/ri";
 import { MdOutlineReportProblem } from "react-icons/md";
 import AppContext from "../Global/AppContext";
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
-
+import { useSelector } from "react-redux";
 const MyPost = ({ post }) => {
+  const userInfo = useSelector((state) => state.user);
+
   console.log(post);
   const { deletePost } = useContext(AppContext);
 
@@ -47,9 +49,8 @@ const MyPost = ({ post }) => {
   return (
     <>
       <div
-
-     style={{borderBottom: `1px solid rgba(47, 51, 54, var(--opacity))` }}
-        className=" post py-3 pr-2 pl-2 justify-center items-center text-[--primary-color]"
+        style={{ borderBottom: `1px solid rgba(47, 51, 54, var(--opacity))` }}
+        className=" post py-3 pr-2 pl-2 justify-center items-center text-[--primary-color"
       >
         <div className="flex h-[100%] mr-1">
           <img
@@ -63,8 +64,8 @@ const MyPost = ({ post }) => {
           <div className="flex flex-col justify-between gap-2">
             <div className="flex items-center pr-2 justify-between">
               <div className="flex gap-2 items-center justify-center leading-[1px] text-[--primary-color]">
-                <h2 className="font-bold text-[15px]">{post.name}</h2>
-                <p className="text-[13px] text-gray-600">{post.userName}</p>
+                <h2 className="font-bold text-[15px]">{userInfo.userName}</h2>
+                <p className="text-[13px] text-gray-600">@{userInfo.name}</p>
               </div>
               <button
                 ref={specificElement}

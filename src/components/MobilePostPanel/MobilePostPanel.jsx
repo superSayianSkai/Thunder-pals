@@ -11,9 +11,11 @@ import { MdCancel } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import PostNav from "../PostPanel/PostNav";
 import AppContext from "../Global/AppContext";
-import { Link, Navigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 const PostPanel = () => {
+  const userInfo = useSelector((state) => state.user);
   const navigateTo = useNavigate();
   const { setPost } = useContext(AppContext);
   const mediaRef = useRef();
@@ -26,15 +28,15 @@ const PostPanel = () => {
   const [words, setWords] = useState("");
   const [newPost, setNewPost] = useState({
     media: "",
-    name: "Skai",
+    name: `${userInfo.userName}`,
     desc: "",
-    userName: "@Aeionie",
+    userName: `${userInfo.name}`,
     likes: "0",
     comments: "0",
     shares: "0",
     liked: "false",
     profileImage: Itadori,
-    ownerId: "Skai",
+    ownerId: "",
   });
 
   const handlePost = (e) => {
@@ -73,9 +75,9 @@ const PostPanel = () => {
     }
     setNewPost({
       media: "",
-      name: "Skai",
+      name: `${userInfo.name}`,
       desc: "",
-      userName: "@Aeionie",
+      userName: `${userInfo.userName}`,
       likes: "12k",
       comments: "12k",
       shares: "12k",

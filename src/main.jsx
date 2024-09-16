@@ -7,6 +7,8 @@ import { Provider } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import firebaseConfig from "./firebase/firebaseconfig.js";
 import store from "../src/context/store";
+import { MantineProvider } from "@mantine/core";
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <AppProvider>

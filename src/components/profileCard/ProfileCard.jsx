@@ -19,7 +19,7 @@ const ProfileCard = ({ location }) => {
       style={{
         boxShadow: location === "profilePage" ? "none" : "",
         borderRadius: location === "profilePage" ? "0" : "",
-        marginBottom: location === "profilePage" ? "1rem" : "",
+        marginBottom: location === "profilePage" ? "" : "",
       }}
       className="profile-card  bg-[--bg-color] text-[--primary-color]"
     >
@@ -37,18 +37,26 @@ const ProfileCard = ({ location }) => {
       </div>
 
       <div className="profile-info  bg-[--bg-color] text-[--primary-color]">
-        <span>
-          <b>
+        <span className="flex gap-2 items-center justify-center">
+          
             {userName ? (
-              userInfo.userName
+             <span className="font-bold"> {userInfo.name}</span>
             ) : (
               <Link to="/">
                 <button className="bg-white text-black">Sign In</button>
               </Link>
             )}
-          </b>
+        
+            {location === "profilePage" ? (
+            <div className="text-[14px]">
+            
+              @{userInfo.userName}
+            </div>
+          ) : (
+            ""
+          )}
         </span>
-        <span>Junior Frontend Engineer</span>
+        <span>{userInfo.userDesc}</span>
       </div>
 
       <div className="people-box border-t-[1px] border-b-[1px] border-[#2F3336] border-opacity-80">

@@ -38,6 +38,10 @@ const App = () => {
       path: "rough",
       element: <ProtectedRoute Component={Rough} />,
     },
+    {
+      path: "edit",
+      element: <ProtectedRoute Component={Rough} />,
+    }
   ]);
   return <RouterProvider router={router} />;
 };

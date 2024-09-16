@@ -1,4 +1,4 @@
-import { FaPen } from "react-icons/fa";
+import { HiOutlinePencil } from "react-icons/hi";
 import { getAuth, signOut } from "firebase/auth";
 import { setLogOut } from "../../context/authSlice";
 import { useDispatch } from "react-redux";
@@ -8,7 +8,9 @@ import { useState, useEffect } from "react";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import ProfileModal from "../ProfileModal/ProfileModal";
 const InfoCard = () => {
+  const [open, setOpen] = useState(false);
   const [userName, setUserName] = useState("");
 
   const userInfo = useSelector((state) => state.user);
@@ -39,27 +41,29 @@ const InfoCard = () => {
         </Link>
         <div className="flex flex-col">
           <span className="text-xl text-[--primary-color]">Settings</span>
-          <p className="text-[--primary-color]">@ {userInfo.userName}</p>
+          <p className="text-[--primary-color]">@{userInfo.userName}</p>
         </div>
       </div>
+
       <div className="InfoHead">
-        <h4>Your Info</h4>
-        <FaPen />
+      <h4 className="font-bold text-[18px] mb-2">Your Info</h4>
+        <HiOutlinePencil className="text-2xl" onClick={() => setOpen(true)} />
       </div>
 
-      <div className="info font-bold">
-        <span>Skai</span>
+      <div className="info">
+        <span>{userInfo.name}</span>
       </div>
 
-      <div className="info font-bold">
-        <span>Junior Frontend Engineer</span>
+      <div className="info ">
+        <span>{userInfo.userDesc}</span>
       </div>
 
-      <div className="info font-bold">
-        <span>Home</span>
-      </div>
+ 
 
-      <button onClick={handleLogOut} className="rounded-sm py-2 bg-red-600">
+      <button
+        onClick={handleLogOut}
+        className="rounded-sm py-2 bg-blue-700 hover:opacity-50"
+      >
         {!loading ? (
           "Log out"
         ) : (
@@ -74,6 +78,7 @@ const InfoCard = () => {
           />
         )}
       </button>
+      {open && <ProfileModal setOpen={setOpen} />}
     </div>
   );
 };
