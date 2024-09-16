@@ -135,7 +135,7 @@ const PostPanel = ({ setPost, setShowPostPanel, showPostPanel }) => {
               onChange={handlePost}
               className="flex-1 border-2 bg-transparent "
               autoFocus
-              style={{ height: "20px" }}
+              style={{ height: "50px" }}
             />
 
             <input

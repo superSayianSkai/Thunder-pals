@@ -19,7 +19,14 @@ const MiddleSide = () => {
           setShowPostPanel={setShowPostPanel}
         />
       ) : (
-        <div className="postSide border-r-[1px] border-l-[1px] border-[#2F3336] border-opacity-80 bg-[--bg-color]">
+        <div
+          style={{
+            borderLeft: `1px solid rgba(47, 51, 54, var(--opacity))`,
+            borderRight: `1px solid rgba(47, 51, 54, var(--opacity))`,
+          }}
+          className="postSide
+          bg-[--bg-color]"
+        >
           {thirdResize ? <PostPanel setPost={setPost} /> : <SingleHeader />}
           <Posts postData={posts} />
           {!thirdResize && <BottomNav setShow={setShowPostPanel} />}

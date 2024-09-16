@@ -2,7 +2,7 @@ import "./peopleCard.css";
 import { Followers } from "../../Data/peopleCard";
 const PeopleCard = () => {
   return (
-    <div className="followersCard border-[1px] border-[#2F3336] border-opacity-55  bg-[--bg-color] text-[--primary-color]">
+    <div style={{ border: `1px solid rgba(47, 51, 54, var(--opacity))` }} className="followersCard border-[1px] border-[#2F3336]  bg-[--bg-color] text-[--primary-color]">
       <p className="followersCard-p">Who is your pal?</p>
       {Followers.map((follower, id) => {
         return (
@@ -14,7 +14,9 @@ const PeopleCard = () => {
               <p>{follower.username}</p>
             </div>
 
-            <button className="button button-follower text-sm">Follow</button>
+            <button className="button button-follower text-sm bg-blue-800">
+              Follow
+            </button>
           </div>
         );
       })}

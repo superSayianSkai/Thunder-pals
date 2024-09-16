@@ -25,7 +25,10 @@ const InfoCard = () => {
   };
 
   return (
-    <div className="InfoCard shadow-md border-[1px] border-[#2F3336] border-opacity-55  bg-[--bg-color] text-[--primary-color]">
+    <div
+      style={{ border: `1px solid rgba(47, 51, 54, var(--opacity))` }}
+      className="InfoCard shadow-md  bg-[--bg-color] text-[--primary-color]"
+    >
       <div className="InfoHead">
         <h4>Your Info</h4>
         <FaPen />

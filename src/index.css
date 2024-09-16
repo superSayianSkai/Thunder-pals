@@ -32,11 +32,13 @@
   --primary-color: black;
   --bg-color: "white";
   --secondary-color: #black;
+  --opacity: 0.5;
 }
 [data-theme="dark"] {
   --primary-color: #fff;
   --bg-color: black;
   --secondary-color: #fff;
+  --opacity: 1;
 }
 
 .app {

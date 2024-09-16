@@ -19,7 +19,6 @@
 
 .search {
   display: flex;
-  border-radius: 10px;
   background-color: var(--inputColor);
   padding: 0.1px;
   width: 80%;
@@ -29,7 +28,6 @@
   border: none;
   outline: none;
   padding: 0.5rem;
-
   width: 100%;
 }
 

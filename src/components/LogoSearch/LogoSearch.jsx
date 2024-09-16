@@ -11,13 +11,13 @@ const Logosearch = () => {
         </Link>
       </div>
 
-      <div className="search bg-gray-100">
-        <div className="icon-container">
+      <div className="search bg-gray-100 rounded-full">
+        <div className="icon-container rounded-full">
           <CiSearch className="text-black text-2xl" />
         </div>
         <input
           type="text"
-          className="text-black rounded-xl bg-gray-100"
+          className="text-black rounded-full bg-gray-100"
           placeholder="#Explore"
         />
       </div>

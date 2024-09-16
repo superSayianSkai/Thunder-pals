@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import "./profileCard.css";
 import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { HiOutlineDotsVertical } from "react-icons/hi";
 
 const ProfileCard = ({ location }) => {
   const [userName, setUserName] = useState("");
@@ -20,9 +19,10 @@ const ProfileCard = ({ location }) => {
       style={{
         boxShadow: location === "profilePage" ? "none" : "",
         borderRadius: location === "profilePage" ? "0" : "",
-        marginBottom: location === "profilePage" ? "1rem" : "",
+        marginBottom: location === "profilePage" ? "0" : "",
+        border: `1px solid rgba(47, 51, 54, var(--opacity))`,
       }}
-      className="border-[1px] border-[#2F3336] border-opacity-55 profile-card  bg-[--bg-color] text-[--primary-color]"
+      className="profile-card  bg-[--bg-color] text-[--primary-color]"
     >
       <div className="profileImages cursor-pointer">
         <img
@@ -52,7 +52,13 @@ const ProfileCard = ({ location }) => {
         <span>Junior Frontend Engineer</span>
       </div>
 
-      <div className="people-box border-t-[1px] border-b-[1px] border-[#2F3336] border-opacity-80">
+      <div
+        style={{
+          borderTop: `1px solid rgba(47, 51, 54, var(--opacity))`,
+          borderBottom: `1px solid rgba(47, 51, 54, var(--opacity))`,
+        }}
+        className="people-box"
+      >
         <div className="follow-card py-2">
           <div className="follow">
             <span>6,866</span>

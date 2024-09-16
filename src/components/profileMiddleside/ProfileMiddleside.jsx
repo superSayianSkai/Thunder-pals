@@ -4,7 +4,10 @@ import MyPostParent from "../post/MyPostParent";
 import { myData } from "../../Data/myData";
 const ProfileMiddleside = () => {
   return (
-    <div className="postSide border-r-[1px] border-l-[1px] border-[#2F3336] border-opacity-80">
+    <div
+      
+      className="postSide"
+    >
       <ProfileCard location="profilePage" />
       <MyPostParent myData={myData} />
     </div>

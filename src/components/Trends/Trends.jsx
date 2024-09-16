@@ -4,7 +4,10 @@ import "./Trends.css";
 const Trends = () => {
   return (
     <>
-      <div className="trend bg-[--bg-color] text-[--secondary-color] border-[1px] border-[#2F3336] border-opacity-80">
+      <div
+        style={{ border: `1px solid rgba(47, 51, 54, var(--opacity))` }}
+        className="trend bg-[--bg-color] text-[--secondary-color]"
+      >
         <h1>Trends for you</h1>
         {trendings.map((trend, id) => {
           return (
