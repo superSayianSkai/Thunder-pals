@@ -6,6 +6,8 @@ import Auth from "../src/components/Auth/Auth";
 import ProtectedRoute from "./protectedRoute/ProtectedRoute";
 import { Navigate } from "react-router-dom";
 import Setting from "./components/Setting/Setting";
+import MobilePostPanel from "../src/components/MobilePostPanel/MobilePostPanel";
+import Rough from "./components/Rough/Rough";
 const App = () => {
   const userToken = useSelector((state) => state.user?.userToken);
   const router = createBrowserRouter([
@@ -25,6 +27,16 @@ const App = () => {
     {
       path: "setting",
       element: <ProtectedRoute Component={Setting} />,
+    },
+
+    {
+      path: "mobilePostPanel",
+      element: <ProtectedRoute Component={MobilePostPanel} />,
+    },
+
+    {
+      path: "rough",
+      element: <ProtectedRoute Component={Rough} />,
     },
   ]);
   return <RouterProvider router={router} />;
