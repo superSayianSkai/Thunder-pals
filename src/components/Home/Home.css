@@ -9,7 +9,7 @@
   .Home {
     grid-template-columns: 5rem auto 1fr;
     padding: 0;
-    gap: 0.1rem;
+  
   }
 }
 

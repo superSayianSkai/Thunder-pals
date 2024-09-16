@@ -11,8 +11,10 @@ import { Link } from "react-router-dom";
 const MidLeftSide = () => {
   return (
     <div
-      
-      className="utility items-center justify-start bg-[--bg-color] text-[--primary-color] border-opacity-80 flex flex-col  gap-12 py-10 "
+      style={{
+        borderRight: `1px solid rgba(47, 51, 54, var(--opacity))`,
+      }}
+      className="utility items-center justify-start bg-[--bg-color] text-[--primary-color] border-opacity-80 flex flex-col  gap-12 py-10 rounded-none m-0"
     >
       <div className="image-container">
         <Link to="/">

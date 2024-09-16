@@ -52,7 +52,7 @@ const SignUp = ({ setChangeUp }) => {
             photoURL: "https://www.pinterest.com/pin/4081455904310080/",
           });
 
-          console.log(userCredential)
+          console.log(userCredential);
           // Signed up
           setLoading(false);
           toast.success("user Registered successfully");
@@ -82,14 +82,16 @@ const SignUp = ({ setChangeUp }) => {
 
   return (
     <div className="relative">
-      <form onSubmit={handleFormSubmit} className="">
-        <h1 className="font-bold text-4xl text-center mb-2">SIGN UP</h1>
+      <form onSubmit={handleFormSubmit} className="text-black ">
+        <h1 className="font-bold text-4xl text-center mb-2 text-black">
+          SIGN UP
+        </h1>
 
         <div>
           <input
             value={userName}
             type="text"
-            className="outline-none p-[15px] bg-[#E1E1CA] my-3 rounded-2xl"
+            className="outline-none p-[15px] border-[1px] border-black  my-3 rounded-full text-black"
             placeholder="Username"
             onChange={handleUserName}
           />
@@ -100,7 +102,7 @@ const SignUp = ({ setChangeUp }) => {
             <input
               value={userEmail}
               type="text"
-              className="outline-none p-[15px] bg-[#E1E1CA] my-3 rounded-2xl"
+              className="outline-none p-[15px] border-[1px] border-black text-black  my-3 rounded-full"
               placeholder="Email"
               onChange={handleEmail}
             />
@@ -108,7 +110,7 @@ const SignUp = ({ setChangeUp }) => {
           <div className="">
             <input
               type={toggleVisibility ? "text" : "password"}
-              className="outline-none p-[15px] bg-[#E1E1CA] my-3 rounded-2xl"
+              className="outline-none p-[15px] border-[1px] border-black  text-black my-3 rounded-full"
               value={pwd}
               placeholder="Password"
               onChange={handlePwd}
@@ -118,7 +120,7 @@ const SignUp = ({ setChangeUp }) => {
           <div>
             <input
               type={toggleVisibility ? "text" : "password"}
-              className="outline-none p-[15px] bg-[#E1E1CA] my-3 rounded-2xl"
+              className="outline-none p-[15px] border-[1px] border-black  text-black bg-white my-3 rounded-full"
               value={confirmPwd}
               placeholder="Confirm Password"
               onChange={handleConfirmPwd}
@@ -139,7 +141,7 @@ const SignUp = ({ setChangeUp }) => {
           </div>
         </div>
 
-        <button className="button-auth rounded-2xl mt-2">
+        <button className="button-auth rounded-full mt-2">
           {!loading ? (
             "Sign up"
           ) : (
@@ -157,7 +159,11 @@ const SignUp = ({ setChangeUp }) => {
 
         <span className="flex gap-2 justify-center items-center mt-3">
           <p>Already have an account? </p>
-          <a href="#" onClick={setChangeUp}>
+          <a
+            className="opacity-80 text-blue-600"
+            href="#"
+            onClick={setChangeUp}
+          >
             Sign in
           </a>
         </span>

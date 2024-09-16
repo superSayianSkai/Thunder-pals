@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat:wght@200;300;400;600;700;800;900&family=Noto+Sans+JP:wght@600&family=Poiret+One&family=Poppins:wght@200;300;400;500;600;700;800&family=Press+Start+2P&family=Yanone+Kaffeesatz:wght@300;400;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,8 +13,6 @@
   transition: all 0.1s ease-in-out;
 }
 
-
-
 @layer base {
   :root {
     --blue: @apply bg-blue-800;
@@ -22,14 +21,23 @@
 :root {
   --primary-color: black;
   --bg-color: white;
-  --secondary-color: black;
+  --variant: #3c3d37;
   --opacity: 0.5;
+  --shadow-color: rgba(0, 0, 0, 0.15); /* White with low opacity */
+  --shadow-blur: 12px;
+  --shadow-offset-x: 0px;
+  --shadow-offset-y: 4px;
 }
 [data-theme="dark"] {
   --primary-color: #fff;
   --bg-color: black;
   --secondary-color: #fff;
   --opacity: 1;
+
+  --shadow-color: rgba(255, 255, 255, 0.15); /* White with low opacity */
+  --shadow-blur: 12px;
+  --shadow-offset-x: 0px;
+  --shadow-offset-y: 4px;
 }
 
 .app {
@@ -52,4 +60,10 @@ button:active {
 
 button {
   @apply bg-blue-800;
+}
+
+@layer utilities {
+  .custom-border {
+    border: 1px solid rgba(47, 51, 54, var(--opacity));
+  }
 }

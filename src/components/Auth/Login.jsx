@@ -60,12 +60,12 @@ const Login = ({ setChangeUp }) => {
   return (
     <div className="a-right">
       <form onSubmit={handleSubmit} className="form-container">
-        <h1 className="font-bold text-4xl mb-2">Login</h1>
+        <h1 className="font-bold text-4xl mb-2 text-black">Login</h1>
         <div>
           <input
             value={userEmail}
             type="text"
-            className="outline-none p-[15px] bg-[#E1E1CA]  rounded-2xl"
+            className="outline-none p-[15px] border-[1px] border-black  text-black rounded-full"
             placeholder="Email"
             onChange={handleUserEmail}
           />
@@ -73,13 +73,13 @@ const Login = ({ setChangeUp }) => {
         <div>
           <input
             value={pwd}
-            type="text"
-            className="outline-none p-[15px] bg-[#E1E1CA] rounded-2xl"
+            type="password"
+            className="outline-none p-[15px] border-[1px] border-black text-black rounded-full"
             placeholder="Password"
             onChange={handleUserPwd}
           />
         </div>
-        <button className="button-auth rounded-2xl ">
+        <button className="button-auth rounded-full">
           {!loading ? (
             "Sign in"
           ) : (
@@ -94,13 +94,18 @@ const Login = ({ setChangeUp }) => {
             />
           )}
         </button>
-        <span className="flex gap-2">
+        <span className="flex gap-2 text-black mt-3">
           <p>Already have an account? </p>
-          <a href="#" onClick={setChangeUp}>
+          <a
+            className="opacity-80 text-blue-600"
+            href="#"
+            onClick={setChangeUp}
+          >
             Sign up
           </a>
         </span>
       </form>
+   
     </div>
   );
 };

@@ -3,7 +3,7 @@ import "./postpanel.css";
 import Itadori from "../../assets/img/itadori.jpeg";
 import { MdInsertPhoto } from "react-icons/md";
 import { MdOutlineGifBox } from "react-icons/md";
-import { BiPoll } from "react-icons/bi";
+import { BiBorderBottom, BiPoll } from "react-icons/bi";
 import { MdOutlineEmojiEmotions } from "react-icons/md";
 import { RiCalendarScheduleLine } from "react-icons/ri";
 import { CiLocationOn } from "react-icons/ci";
@@ -107,11 +107,13 @@ const PostPanel = ({ setPost, setShowPostPanel, showPostPanel }) => {
         zIndex: showPostPanel ? "2" : "",
         Visibility: showPostPanel ? "visible" : "hidden",
         top: 0,
+        borderBottom: `1px solid rgba(47, 51, 54, var(--opacity))`,
+    
       }}
     >
       {showPostPanel && (
         <button
-          className="absolute top-2 right-1 bg-transparent justify-self-start"
+          className="absolute top-2 right-1 bg-transparent justify-self-start "
           onClick={removePostPanel}
         >
           <IoMdClose className=" text-black text-4xl cursor-pointer" />

@@ -19,12 +19,11 @@ const ProfileCard = ({ location }) => {
       style={{
         boxShadow: location === "profilePage" ? "none" : "",
         borderRadius: location === "profilePage" ? "0" : "",
-        marginBottom: location === "profilePage" ? "0" : "",
-        border: `1px solid rgba(47, 51, 54, var(--opacity))`,
+        marginBottom: location === "profilePage" ? "1rem" : "",
       }}
       className="profile-card  bg-[--bg-color] text-[--primary-color]"
     >
-      <div className="profileImages cursor-pointer">
+      <div className="profileImages">
         <img
           style={{
             borderRadius:
@@ -52,13 +51,7 @@ const ProfileCard = ({ location }) => {
         <span>Junior Frontend Engineer</span>
       </div>
 
-      <div
-        
-        style={{ borderTop: `1px solid rgba(47, 51, 54, var(--opacity))`,
-          borderBottom: `1px solid rgba(47, 51, 54, var(--opacity))` 
-         }}
-        className="people-box"
-      >
+      <div className="people-box border-t-[1px] border-b-[1px] border-[#2F3336] border-opacity-80">
         <div className="follow-card py-2">
           <div className="follow">
             <span>6,866</span>

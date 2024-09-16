@@ -47,7 +47,7 @@ const Post = ({ data }) => {
   console.log(visibleMenu);
   return (
     <>
-      <div className="post py-3 pr-2 pl-2 justify-center items-center border-b-[1px] border-[#2F3336] border-opacity-55">
+      <div className="post py-3 pr-2 pl-2 justify-center items-center border-b-[1px] border-[#2F3336] border-opacity-55 ">
         <div className="flex h-[100%] mr-1">
           <img
             className=" rounded-full w-[40px] h-[38px]"

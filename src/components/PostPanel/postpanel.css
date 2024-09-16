@@ -1,6 +1,5 @@
 .post-panel-container {
   display: flex;
-  border-bottom: 1px solid rgb(212, 205, 205);
   padding: 2rem 1rem 0.8rem 1rem;
   gap: 1rem;
   max-height: 100vh;
@@ -16,7 +15,6 @@
 .post-panel-container > div {
   display: flex;
   flex-direction: column;
-
   gap: 1rem;
 }
 .post-panel-container textarea {

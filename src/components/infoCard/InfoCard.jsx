@@ -48,7 +48,7 @@ const InfoCard = () => {
         </Link>
       </div>
 
-      <button onClick={handleLogOut} className="rounded-sm py-2 bg-red-600">
+      <button onClick={handleLogOut} className="rounded-sm py-2 bg-red-600 hover:opacity-50">
         {!loading ? (
           "Log out"
         ) : (

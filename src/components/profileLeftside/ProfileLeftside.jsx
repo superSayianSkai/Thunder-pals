@@ -5,7 +5,12 @@ import { useContext } from "react";
 import InfoCard from "../infoCard/InfoCard";
 const ProfileSide = () => {
   return (
-    <div className="profileSide">
+    <div
+      style={{
+        borderRight: `1px solid rgba(47, 51, 54, var(--opacity))`,
+      }}
+      className="profileSide"
+    >
       <Logosearch />
 
       <InfoCard />
