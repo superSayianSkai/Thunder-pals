@@ -5,7 +5,7 @@ import Itachi from "../assets/img/Itachi.jpg";
 import Itadori from "../assets/img/itadori.jpeg";
 import Ataru from "../assets/img/Ataru.jpg";
 import Goj from "../assets/img/Goj.jpg";
-
+import Boruto from "../assets/img/boruto.jpeg";
 
 export const postData = [
   {
@@ -17,7 +17,7 @@ export const postData = [
     comments: "13k",
     shares: "12k",
     liked: false,
-    profileImage: Itadori,
+    profileImage:Boruto,
     ownerId: "Aeionie",
   },
   {

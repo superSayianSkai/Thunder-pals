@@ -50,11 +50,11 @@ const InfoCard = () => {
         <HiOutlinePencil className="text-2xl" onClick={() => setOpen(true)} />
       </div>
 
-      <div className="info">
+      <div className="info text-[--primary-color]">
         <span>{userInfo.name}</span>
       </div>
 
-      <div className="info ">
+      <div className="info text-[--primary-color]">
         <span>{userInfo.userDesc}</span>
       </div>
 
