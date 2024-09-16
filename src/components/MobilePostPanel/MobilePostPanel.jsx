@@ -11,8 +11,10 @@ import { MdCancel } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import PostNav from "../PostPanel/PostNav";
 import AppContext from "../Global/AppContext";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const PostPanel = () => {
+  const navigateTo = useNavigate();
   const { setPost } = useContext(AppContext);
   const mediaRef = useRef();
   const textareaRef = useRef();
@@ -60,16 +62,13 @@ const PostPanel = () => {
       console.log("Couldn't select an image");
     }
   };
-  const removePostPanel = () => {
-    setShowPostPanel(false);
-  };
 
   const handleSubmit = () => {
     if (newPost.desc === "" && newPost.media === "") {
       alert("Please Input something");
     } else {
       setPost((prev) => [newPost, ...prev]);
-      removePostPanel();
+      navigateTo("/");
       console.log(words);
     }
     setNewPost({
@@ -101,12 +100,9 @@ const PostPanel = () => {
   };
   return (
     <div className="h-[100svh] bg-[--bg-color] ">
-      <div className="post-panel-container h-[40svh] text-[--primary-color] border-b-[1px] border-[#2F3336] border-opacity-55 bg-[--bg-color]">
+      <div className="post-panel-container min-h-[40svh] text-[--primary-color] border-b-[1px] border-[#2F3336] border-opacity-55 bg-[--bg-color]">
         {
-          <button
-            className="absolute top-2 right-0 justify-self-start  bg-transparent"
-            onClick={removePostPanel}
-          >
+          <button className="absolute top-2 right-0 justify-self-start  bg-transparent">
             <Link to="/">
               <IoMdClose className="bg-none text-3xl cursor-pointer text-[--primary-color]" />
             </Link>
@@ -129,7 +125,7 @@ const PostPanel = () => {
                 onChange={handlePost}
                 className="flex-1 border-2 bg-transparent "
                 autoFocus
-                style={{ height: "20px" }}
+                style={{ height: "50px" }}
               />
 
               <input

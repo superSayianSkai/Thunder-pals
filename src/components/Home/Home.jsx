@@ -1,7 +1,6 @@
 import ProfileSide from "../leftSide/ProfileSide";
 import MiddleSide from "../middleSide/MiddleSide";
 import RightSide from "../RightSide/RightSide";
-import BottomNav from "../mobileBottomNav/BottomNav";
 import "./Home.css";
 import MidLeftSide from "../midLeftSide/MidLeftSide";
 import { useEffect, useContext } from "react";
@@ -15,7 +14,6 @@ const Home = () => {
     setSecondResizeState,
     thirdResize,
     setThirdResizeState,
-    setShowPostPanel,
   } = useContext(AppContext);
 
   useEffect(() => {
@@ -40,7 +38,6 @@ const Home = () => {
       {firstResize ? <ProfileSide /> : !thirdResize ? null : <MidLeftSide />}
       <MiddleSide />
       {secondResize ? <RightSide /> : null}
-    
     </div>
   );
 };

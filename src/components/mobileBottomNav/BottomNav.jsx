@@ -9,7 +9,7 @@ const BottomNav = () => {
   return (
     <div className="fixed w-[100%] py-3 px-2 h-[60px] justify-between items-center bottom-0 flex border-t-[1px] border-slate-400 bg-[--bg-color] text-[--primary-color] border-opacity-40">
       <Link to="/">
-        <button className="bg-transparent">
+        <button className="bg-transparent"> 
           <GoHome className="text-2xl text-[--primary-color]" />
         </button>
       </Link>

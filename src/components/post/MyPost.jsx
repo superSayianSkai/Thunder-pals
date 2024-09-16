@@ -44,11 +44,14 @@ const MyPost = ({ post }) => {
     };
   }, []);
 
-  console.log(visibleMenu);
   return (
     <>
       <div
-        style={{ borderLeft: `1px solid rgba(47, 51, 54, var(--opacity))` }}
+        style={{
+          borderRight: `1px solid rgba(47, 51, 54, var(--opacity))`,
+          borderLeft: `1px solid rgba(47, 51, 54, var(--opacity))`,
+          borderTop: `1px solid rgba(47, 51, 54, var(--opacity))`,
+        }}
         className=" post py-3 pr-2 pl-2 justify-center items-center text-[--primawry-color] "
       >
         <div className="flex h-[100%] mr-1">
@@ -158,19 +161,19 @@ const MyPost = ({ post }) => {
           </div>
           <div className="flex items-center justify-between mt-2">
             <div className="flex items-center justify-center gap-1">
-              <CiHeart className="text-xl" />
+              <CiHeart className="text-xl text-[--primary-color]" />
               <div>{post.likes}</div>
             </div>
             <div className="flex items-center justify-center gap-1">
-              <FaRegComment className="text-md" />
+              <FaRegComment className="text-md text-[--primary-color]" />
               <div>{post.comments}</div>
             </div>
             <div className="flex items-center gap-1 justify-center">
-              <RiShareForwardLine className="text-xl" />
+              <RiShareForwardLine className="text-xl text-[--primary-color]" />
               <div>{post.shares}</div>
             </div>
             <div className="flex items-center justify-center  gap-1">
-              <CiBookmark className="text-xl" />
+              <CiBookmark className="text-xl text-[--primary-color]" />
             </div>
           </div>
         </div>

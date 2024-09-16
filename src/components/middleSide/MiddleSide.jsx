@@ -14,7 +14,7 @@ const MiddleSide = () => {
     <>
       <div
         className="postSide
-          bg-[--bg-color] h-[100svh]"
+          bg-[--bg-color] h-[92svh]"
       >
         {thirdResize ? <PostPanel setPost={setPost} /> : <SingleHeader />}
         <Posts postData={posts} />

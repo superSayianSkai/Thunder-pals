@@ -53,10 +53,10 @@ const ProfileCard = ({ location }) => {
       </div>
 
       <div
-        style={{
-          borderTop: `1px solid rgba(47, 51, 54, var(--opacity))`,
-          borderBottom: `1px solid rgba(47, 51, 54, var(--opacity))`,
-        }}
+        
+        style={{ borderTop: `1px solid rgba(47, 51, 54, var(--opacity))`,
+          borderBottom: `1px solid rgba(47, 51, 54, var(--opacity))` 
+         }}
         className="people-box"
       >
         <div className="follow-card py-2">

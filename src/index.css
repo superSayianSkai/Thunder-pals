@@ -12,16 +12,7 @@
   transition: all 0.1s ease-in-out;
 }
 
-/* :root {
-  --primary-color: black;
-  --bg-color: "white";
-  --secondary-color: #180161;
-}
-[data-theme="dark"] {
-  --primary-color: #fff;
-  --bg-color: black;
-  --secondary-color: #fff;
-} */
+
 
 @layer base {
   :root {
@@ -30,8 +21,8 @@
 }
 :root {
   --primary-color: black;
-  --bg-color: "white";
-  --secondary-color: #black;
+  --bg-color: white;
+  --secondary-color: black;
   --opacity: 0.5;
 }
 [data-theme="dark"] {

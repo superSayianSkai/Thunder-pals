@@ -1,7 +1,6 @@
 .postSide {
   display: flex;
   flex-direction: column;
-  height: 100svh;
   overflow-y: scroll;
 }
 .for-you {
