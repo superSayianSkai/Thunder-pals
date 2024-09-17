@@ -43,6 +43,8 @@ const InfoCard = () => {
         <span>{userInfo.userName}</span>
       </div>
 
+      <div className="text-[14px]">{userInfo.name ? `@${userInfo.name}` : "add your name"}</div>
+
       <div className="info">
         <span>{userInfo.userDesc}</span>
       </div>

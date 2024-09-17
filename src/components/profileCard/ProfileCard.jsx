@@ -38,20 +38,16 @@ const ProfileCard = ({ location }) => {
 
       <div className="profile-info  bg-[--bg-color] text-[--primary-color]">
         <span className="flex gap-2 items-center justify-center">
-          
-            {userName ? (
-             <span className="font-bold"> {userInfo.name}</span>
-            ) : (
-              <Link to="/">
-                <button className="bg-white text-black">Sign In</button>
-              </Link>
-            )}
-        
-            {location === "profilePage" ? (
-            <div className="text-[14px]">
-            
-              @{userInfo.userName}
-            </div>
+          {userName ? (
+            <span className="font-bold"> {userInfo.userName}</span>
+          ) : (
+            <Link to="/">
+              <button className="bg-white text-black">Sign In</button>
+            </Link>
+          )}
+
+          {location === "profilePage" ? (
+            <div className="text-[14px]">{userInfo.name ? `@${userInfo.name}` : "add your name"}</div>
           ) : (
             ""
           )}
