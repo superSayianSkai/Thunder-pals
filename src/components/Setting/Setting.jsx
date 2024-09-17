@@ -1,4 +1,4 @@
-import "../infoCard/infocard.css"
+import "../infoCard/infocard.css";
 import { HiOutlinePencil } from "react-icons/hi";
 import { getAuth, signOut } from "firebase/auth";
 import { setLogOut } from "../../context/authSlice";
@@ -35,7 +35,7 @@ const InfoCard = () => {
   };
 
   return (
-    <div className="InfoCard shadow-md border-[1px] border-[#2F3336] border-opacity-55  bg-[--bg-color] text-[--primary-color] rounded-none w-[100%] h-[100vh]">
+    <div className="InfoCard shadow-md border-opacity-55  bg-[--bg-color] text-[--primary-color] rounded-none w-[100%] h-[100vh]">
       <div className="flex gap-6 items-center mb-8 ml-2">
         <Link to="/">
           <FaLongArrowAltLeft className="text-2xl" />
@@ -47,19 +47,20 @@ const InfoCard = () => {
       </div>
 
       <div className="InfoHead">
-      <h4 className="font-bold text-[18px] mb-2">Your Info</h4>
+        <h4 className="font-bold text-[18px] mb-2">Your Info</h4>
         <HiOutlinePencil className="text-2xl" onClick={() => setOpen(true)} />
       </div>
 
       <div className="info">
         <span className="text-[--primary-color]">{userInfo.name}</span>
       </div>
+      <div className="text-[14px]">
+        {userInfo.name ? `@${userInfo.name}` : "add your name"}
+      </div>
 
       <div className="info ">
         <span className="text-[--primary-color]">{userInfo.userDesc}</span>
       </div>
-
- 
 
       <button
         onClick={handleLogOut}

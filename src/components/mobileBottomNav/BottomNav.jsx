@@ -13,10 +13,10 @@ const BottomNav = () => {
           <GoHome className="text-2xl text-[--primary-color]" />
         </button>
       </Link>
-      <Link to="rough">
+      <Link to="/rough">
         <BiMessage className="text-2xl" />
       </Link>
-      <Link to="mobilePostPanel">
+      <Link to="/mobilePostPanel">
         <FaPlus className="text-2xl" />
       </Link>
       <Link to="/setting">
