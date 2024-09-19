@@ -72,7 +72,7 @@ const MyPost = ({ post }) => {
                 style={{ background: " none" }}
                 onClick={handleMenu}
               >
-                <HiOutlineDotsHorizontal className="text-xl cursor-pointer text-black" />
+                <HiOutlineDotsHorizontal className="text-xl cursor-pointer text-[--primary-color]" />
               </button>
 
               <div
@@ -118,7 +118,7 @@ const MyPost = ({ post }) => {
                 ) : (
                   <ul className="flex flex-col gap-5 font-bold text-md cursor-pointer text-sm text-black justify-center">
                     <li className="flex gap-2 items-center">
-                      <HiOutlineEmojiSad className="text-2xl" />
+                      <HiOutlineEmojiSad className="text-2xl " />
                       not interested in this post
                     </li>
                     <li className="flex gap-2 items-center">
@@ -150,9 +150,10 @@ const MyPost = ({ post }) => {
               {post.desc}
             </p>
           </div>
-          <div className="w-[100%] mt-2">
+
+          <div className="w-[100%] mt-2 rounded-full ">
             <img
-              className=" rounded-2xl w-[100%]  object-auto "
+              className=" object-fit  w-[95%] max-w-[750px] max-h-[450px] rounded-2xl overflow-clip "
               src={post.media}
               alt=""
             />
@@ -160,15 +161,15 @@ const MyPost = ({ post }) => {
           <div className="flex items-center justify-between mt-2">
             <div className="flex items-center justify-center gap-1">
               <CiHeart className="text-xl text-[--primary-color]" />
-              <div>{post.likes}</div>
+              <div className="text-[--primary-color]">{post.likes}</div>
             </div>
             <div className="flex items-center justify-center gap-1">
               <FaRegComment className="text-md text-[--primary-color]" />
-              <div>{post.comments}</div>
+              <div className="text-[--primary-color]">{post.comments}</div>
             </div>
             <div className="flex items-center gap-1 justify-center">
               <RiShareForwardLine className="text-xl text-[--primary-color]" />
-              <div>{post.shares}</div>
+              <div className="text-[--primary-color]">{post.shares}</div>
             </div>
             <div className="flex items-center justify-center  gap-1">
               <CiBookmark className="text-xl text-[--primary-color]" />

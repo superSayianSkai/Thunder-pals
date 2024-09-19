@@ -1,4 +1,4 @@
-import "../infoCard/infocard.css"
+import "../infoCard/infocard.css";
 import { HiOutlinePencil } from "react-icons/hi";
 import { getAuth, signOut } from "firebase/auth";
 import { setLogOut } from "../../context/authSlice";
@@ -9,9 +9,10 @@ import { useState, useEffect } from "react";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import ProfileModal from "../ProfileModal/ProfileModal";
+import AppContext from "../Global/AppContext";
+import { useContext } from "react";
 const InfoCard = () => {
-  const [open, setOpen] = useState(false);
+  const { setOpen } = useContext(AppContext);
   const [userName, setUserName] = useState("");
 
   const userInfo = useSelector((state) => state.user);
@@ -47,7 +48,7 @@ const InfoCard = () => {
       </div>
 
       <div className="InfoHead">
-      <h4 className="font-bold text-[18px] mb-2">Your Info</h4>
+        <h4 className="font-bold text-[18px] mb-2">Your Info</h4>
         <HiOutlinePencil className="text-2xl" onClick={() => setOpen(true)} />
       </div>
 
@@ -58,8 +59,6 @@ const InfoCard = () => {
       <div className="info ">
         <span className="text-[--primary-color]">{userInfo.userDesc}</span>
       </div>
-
- 
 
       <button
         onClick={handleLogOut}
@@ -79,7 +78,6 @@ const InfoCard = () => {
           />
         )}
       </button>
-      {open && <ProfileModal setOpen={setOpen} />}
     </div>
   );
 };

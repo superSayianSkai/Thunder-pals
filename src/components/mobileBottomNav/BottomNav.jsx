@@ -13,16 +13,16 @@ const BottomNav = () => {
           <GoHome className="text-2xl text-[--primary-color]" />
         </button>
       </Link>
-      <Link to="rough">
+      <Link to="/rough">
         <BiMessage className="text-2xl" />
       </Link>
-      <Link to="mobilePostPanel">
+      <Link to="/mobilePostPanel">
         <FaPlus className="text-2xl" />
       </Link>
       <Link to="/setting">
         <IoSettingsOutline className="text-2xl" />
       </Link>
-      <Link to="./profile">
+      <Link to="/profile">
         <button className="bg-transparent">
           <CgProfile className="text-2xl text-[--primary-color]" />
         </button>

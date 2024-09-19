@@ -3,11 +3,12 @@ import itadori from "../../assets/img/itadori.jpeg";
 import { Link } from "react-router-dom";
 import "./profileCard.css";
 import { useSelector } from "react-redux";
-import { useEffect, useState } from "react";
-
+import { useContext, useEffect, useState } from "react";
+import AppContext from "../Global/AppContext";
+import KeybladeSkai from "../../assets/img/auth/KeybladeSkai.jpg"
 const ProfileCard = ({ location }) => {
   const [userName, setUserName] = useState("");
-
+  const { setOpen } = useContext(AppContext);
   const userInfo = useSelector((state) => state.user);
   useEffect(() => {
     setUserName(userInfo);
@@ -33,13 +34,15 @@ const ProfileCard = ({ location }) => {
           alt=""
         />
 
-        <img src={itadori} alt="" className="border-[1px] border-[#2F3336]" />
+        <img src={KeybladeSkai} alt="" className="border-[1px] border-[#2F3336]" />
       </div>
 
       <div className="profile-info  bg-[--bg-color] text-[--primary-color]">
         <span className="flex gap-2 items-center justify-center">
           {userName ? (
-            <span className="font-bold"> {userInfo.userName}</span>
+           
+              <span className="font-bold cursor-pointer" onClick={() => setOpen(true)}> {userInfo.userName}</span>
+          
           ) : (
             <Link to="/">
               <button className="bg-white text-black">Sign In</button>
@@ -47,12 +50,14 @@ const ProfileCard = ({ location }) => {
           )}
 
           {location === "profilePage" ? (
-            <div className="text-[14px]">{userInfo.name ? `@${userInfo.name}` : "add your name"}</div>
+            <div className="text-[14px]" onClick={() => setOpen(true)}>
+              {userInfo.name ? `@${userInfo.name}` : "@add your name..."}
+            </div>
           ) : (
             ""
           )}
         </span>
-        <span>{userInfo.userDesc}</span>
+        <span className="onClick={() => setOpen(true)}">{userInfo.userDesc ? `${userInfo.userDesc}` : "add your Bio..."}</span>
       </div>
 
       <div className="people-box border-t-[1px] border-b-[1px] border-[#2F3336] border-opacity-80">
@@ -65,7 +70,7 @@ const ProfileCard = ({ location }) => {
           <div className=" border-l-[1px] border-[#2F3336] border-opacity-80 "></div>
 
           <div className="follow">
-            <span>1</span>
+            <span>1000</span>
             <span>Following</span>
           </div>
 

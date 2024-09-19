@@ -43,6 +43,7 @@ const ProfileModal = ({ setOpen }) => {
       <div className="p-4 gap-2 flex-col min-h-[250px] bg-white text-black flex w-[450px] relative rounded-md">
         <div className="flex justify-between">
           <h1 className="text-2xl font-medium">YOUR MOJO</h1>
+          
           <MdCancel
             onClick={() => setOpen(false)}
             className="text-black text-3xl"

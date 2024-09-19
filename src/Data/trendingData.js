@@ -1,28 +1,28 @@
 export const trendings=[
     {
-        tag:"#Sakuna",
-        shares:"97k shares"
+        tag:"Dingboard",
+        posts:"97k posts"
     },
     {
-        tag:"#Deku",
-        shares:"90k shares"
+        tag:"CanvaDesu",
+        posts:"90k posts"
     },
     {
-        tag:'MHA',
-        shares:"80.5k shares"
+        tag:'PixieDox',
+        posts:"80.5k posts"
 
     }
     ,
     {
         tag:"Solo Leveling",
-        shares:"80kshares"
+        posts:"80k posts"
     } ,
     {
-        tag:"Kaiju NO 8",
-        shares:"70.5k shares"
+        tag:"My hero academia",
+        posts:"70.5k posts"
     } ,
     {
-        tag:"EdenZero",
-        shares:"70k shares"
+        tag:"Blindsight",
+        posts:"70k posts"
     }
 ]

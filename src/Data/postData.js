@@ -1,48 +1,124 @@
-import Tanjiro from "../assets/img/Tanjiro.jpg";
-import Luffy from "../assets/img/luffy.jpg";
-import Itachi from "../assets/img/Itachi.jpg";
-// user profile image
-import Itadori from "../assets/img/itadori.jpeg";
-import Ataru from "../assets/img/Ataru.jpg";
-import Goj from "../assets/img/Goj.jpg";
-import Boruto from "../assets/img/boruto.jpeg";
+import hitler from "../assets/img/auth/hitler.jpg";
+import light from "../assets/img/auth/light.jpg";
+import history from "../assets/img/auth/history.jpg";
 
+// user profile image
+
+import pieGuy from "../assets/img/auth/pieGuy.jpeg";
+import kache from "../assets/img/auth/kache.jpg";
+import vin from "../assets/img/auth/vin.jpg";
+import aryos from "../assets/img/auth/aryos.jpg";
+import kenji from "../assets/img/auth/kenji.jpg";
+import col from "../assets/img/auth/col.jpg";
+import d from "../assets/img/auth/d.jpg";
+import dd from "../assets/img/auth/dd.jpg";
+import nedSeig from "../assets/img/auth/nedSieg.jpg";
+import nedSeig2 from "../assets/img/auth/nedSeig2.jpg";
+import elon from "../assets/img/elon.jpg"
+import elon2 from "../assets/img/elon2.jpg";
 export const postData = [
   {
-    media: Tanjiro,
-    name: "Aeionie!",
-    desc: "Tanjiro Kamado's unyielding determination and resilience inspire those around him as he faces overwhelming odds. His compassion and empathy, even towards his enemies, showcase his unique strength of character. As a skilled swordsman and loving brother, Tanjiro's dedication to protecting his loved ones and finding a cure for Nezuko sets him apart as the GOAT.",
-    userName: "@tanjiro55",
-    likes: "23k",
+    media: hitler,
+    name: "kache",
+    desc: "me, a noble, whose nobility is threatened, immediately switching to slave morality:",
+    userName: "@yacine",
+    likes: "100k",
     comments: "13k",
-    shares: "12k",
+    shares: "22k",
+    time: "19h",
     liked: false,
-    profileImage:Boruto,
-    ownerId: "Aeionie",
+    profileImage: kache,
+    ownerId: "kache",
   },
   {
-    media: Luffy,
-    name: "Simone",
-    desc: "Luffy the GOAT",
-    userName: "@simeone",
-    likes: "4k",
-    comments: "13k",
-    shares: "12k",
+    media: light,
+    name: "vin",
+    desc: "this is how i post btw",
+    userName: "@vin_acct",
+    likes: "41k",
+    comments: "53k",
+    shares: "2k",
+    time: "4h",
     liked: true,
-    profileImage: Ataru,
-    ownerId: "Simone",
+    profileImage: vin,
+    ownerId: "vin",
   },
   {
-    media: Itachi,
-    name: "Julie",
-    desc: "TItachi finna dust them all",
-    userName: "@julielove",
-    likes: "4k",
-    comments: "13k",
-    shares: "12k",
+    media: elon2,
+    name: " Elon Musk",
+    desc: "Polaris crew is home safe & sound!",
+    userName: "@elonmusk",
+    likes: "504k",
+    comments: "130k",
+    shares: "145k",
     liked: true,
-    profileImage: Goj,
+    time: "2hr",
+    profileImage: elon,
     ownerId: "Julie",
   },
-
+  {
+    media: "",
+    name: "Aryas",
+    desc: "I wanna be one with my gpu",
+    userName: "@Aryvyo",
+    likes: "4k",
+    comments: "13k",
+    shares: "12k",
+    liked: true,
+    time: "1m",
+    profileImage: aryos,
+    ownerId: "Julie",
+  },
+  {
+    media: history,
+    name: " λux",
+    desc: "best shows of 2024 - outstanding direction and storytelling...i liked the way it was directed focusing on the details of japanese culture and philosophy...",
+    userName: "@novasarc01",
+    likes: "25k",
+    comments: "300",
+    shares: "12k",
+    liked: true,
+    time: "2h",
+    profileImage: pieGuy,
+    ownerId: "Julie",
+  },
+  {
+    media: nedSeig2,
+    name: "Seig",
+    desc: "2003",
+    userName: "@NedSeig",
+    likes: "65k",
+    comments: "65k",
+    shares: "12k",
+    liked: true,
+    time: "2hr",
+    profileImage: nedSeig,
+    ownerId: "Julie",
+  },
+  {
+    media: kenji,
+    name: "Aremu Olakunle Umaru",
+    desc: "We pray for gigs upon gigs this week RT to lock it in",
+    userName: "@colTheDeveloper",
+    likes: "85k",
+    comments: "45k",
+    shares: "12k",
+    liked: true,
+    time: "5hr",
+    profileImage: col,
+    ownerId: "Julie",
+  },
+  {
+    media: dd,
+    name: " Daniel . (doctor)",
+    desc: "2003",
+    userName: "@onadan_",
+    likes: "95k",
+    comments: "25k",
+    shares: "22k",
+    liked: true,
+    time: "1hr",
+    profileImage: d,
+    ownerId: "Julie",
+  },
 ];

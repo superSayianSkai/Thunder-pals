@@ -20,6 +20,7 @@
 }
 :root {
   --primary-color: black;
+  --secondary-color: white;
   --bg-color: white;
   --variant: #3c3d37;
   --opacity: 0.5;
@@ -30,15 +31,16 @@
   --hover-bg-color: #f9fafb;
 }
 [data-theme="dark"] {
+  --secondary-color: black;
   --primary-color: #fff;
   --bg-color: black;
-  --secondary-color: #fff;
+
   --opacity: 1;
   --shadow-color: rgba(255, 255, 255, 0.15); /* White with low opacity */
   --shadow-blur: 12px;
   --shadow-offset-x: 0px;
   --shadow-offset-y: 4px;
-  --hover-bg-color: #3333; 
+  --hover-bg-color: #3333;
 }
 
 .app {

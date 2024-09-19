@@ -7,14 +7,14 @@ import SingleHeader from "../SingleHeader/SingleHeader";
 import BottomNav from "../mobileBottomNav/BottomNav";
 
 const MiddleSide = () => {
-  const { posts, setPost, thirdResize, setShowPostPanel, showPostPanel } =
+  const { posts, setPost, thirdResize, setShowPostPanel,  } =
     useContext(AppContext);
 
   return (
     <>
       <div
         className="postSide
-          bg-[--bg-color] sm:h-[92svh] md:h-[100svh]  lg:h-[98svh]"
+          bg-[--bg-color] pb-2 h-[92svh] sm:h-[100svh] md:h-[100svh] lg:h-[100svh]"
       >
         {thirdResize ? <PostPanel setPost={setPost} /> : <SingleHeader />}
         <Posts postData={posts} />

@@ -16,7 +16,7 @@ const ProfileSide = () => {
 
       <div className="flex gap-4 items-center">
         <Link to="/">
-          <HiArrowSmLeft className="text-3xl text-[--primary-color] hover:bg-slate-100 hover:rounded-xl hover:text-[--primary-color]" />
+          <HiArrowSmLeft className="text-3xl text-[--primary-color] hover:bg-slate-100  hover:rounded-xl hover:text-[--secondary-color]" />
         </Link>
         <div className="flex flex-col justify-center">
           <span className="text-xl text-[--primary-color]">@ {userInfo.userName}</span>

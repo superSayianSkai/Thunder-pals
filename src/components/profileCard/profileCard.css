@@ -1,7 +1,7 @@
 .profile-card {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1rem;  
   overflow-x: clip;
   background-color: #fff;
   box-shadow: var(--shadow-offset-x) var(--shadow-offset-y) var(--shadow-blur)

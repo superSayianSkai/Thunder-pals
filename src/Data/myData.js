@@ -2,6 +2,7 @@
 import Itadori from "../assets/img/itadori.jpeg";
 import ICONS from "../assets/img/ICONS.jpeg";
 import hinata from "../assets/img/Hinata.jpeg";
+
 export const myData = [
   {
     media: hinata,
@@ -19,6 +20,18 @@ export const myData = [
     media: ICONS,
     name: "Skai.",
     desc: "GOJO's Eyes!!!",
+    userName: "@keybladeSkai",
+    likes: "4k",
+    comments: "13k",
+    shares: "12k",
+    liked: true,
+    profileImage: Itadori,
+    ownerId: "Aeionie",
+  },
+  {
+    media: Itadori,
+    name: "Skai.",
+    desc: "Itadori finna dust them all",
     userName: "@keybladeSkai",
     likes: "4k",
     comments: "13k",

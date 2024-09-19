@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useContext } from "react";
 import "./../post/post.css";
-import Itadori from "../../assets/img/itadori.jpeg";
+import Itadori from "../../assets/img/auth/KeybladeSkai.jpg";
 import { MdInsertPhoto } from "react-icons/md";
 import { MdOutlineGifBox } from "react-icons/md";
 import { BiPoll } from "react-icons/bi";
@@ -11,7 +11,7 @@ import { MdCancel } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import PostNav from "../PostPanel/PostNav";
 import AppContext from "../Global/AppContext";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 const PostPanel = () => {
@@ -36,7 +36,7 @@ const PostPanel = () => {
     shares: "0",
     liked: "false",
     profileImage: Itadori,
-    ownerId: "",
+    ownerId: `${userInfo.userName}`,
   });
 
   const handlePost = (e) => {
@@ -83,7 +83,7 @@ const PostPanel = () => {
       shares: "12k",
       liked: "false",
       profileImage: Itadori,
-      ownerId: "Skai",
+      ownerId: `${userInfo.userName}`,
     });
 
     if (mediaRef.current) {
@@ -149,8 +149,9 @@ const PostPanel = () => {
                       src={mediaPreview}
                       alt="preview"
                       style={{ width: "100%" }}
-                      className=""
+                      className="h-[60vh] object-cover rounded-2xl"
                     />
+
                     <button
                       className="absolute top-2 right-1 bg-transparent"
                       onClick={removePicture}

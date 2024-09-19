@@ -8,8 +8,9 @@ export const AppProvider = ({ children }) => {
   const [thirdResize, setThirdResizeState] = useState(false);
   const [posts, setPost] = useState(initialPostData);
   const [showPostPanel, setShowPostPanel] = useState(false);
-  const [profile,setProfile]=useState(false)
-  const [Theme,setTheTheme]=useState(false);
+  const [profile, setProfile] = useState(false);
+  const [Theme, setTheTheme] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const deletePost = (name) => {
     setPost((prevPosts) => prevPosts.filter((post) => post.name !== name));
@@ -32,7 +33,9 @@ export const AppProvider = ({ children }) => {
         profile,
         setProfile,
         Theme,
-        setTheTheme
+        setTheTheme,
+        setOpen,
+        open,
       }}
     >
       {children}

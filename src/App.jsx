@@ -8,7 +8,11 @@ import { Navigate } from "react-router-dom";
 import Setting from "./components/Setting/Setting";
 import MobilePostPanel from "../src/components/MobilePostPanel/MobilePostPanel";
 import Rough from "./components/Rough/Rough";
+import ProfileModal from "./components/ProfileModal/ProfileModal";
+import { useContext } from "react";
+import AppContext from "./components/Global/AppContext";
 const App = () => {
+  const { open, setOpen } = useContext(AppContext);
   const userToken = useSelector((state) => state.user?.userToken);
   const router = createBrowserRouter([
     {
@@ -38,12 +42,13 @@ const App = () => {
       path: "rough",
       element: <ProtectedRoute Component={Rough} />,
     },
-    {
-      path: "edit",
-      element: <ProtectedRoute Component={Rough} />,
-    }
   ]);
-  return <RouterProvider router={router} />;
+  return (
+    <div>
+      {open && <ProfileModal setOpen={setOpen} />}
+      <RouterProvider router={router} />
+    </div>
+  );
 };
 
 export default App;

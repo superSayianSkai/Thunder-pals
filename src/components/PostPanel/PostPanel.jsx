@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useContext } from "react";
 import "./postpanel.css";
-import Itadori from "../../assets/img/itadori.jpeg";
+import skai from "../../assets/img/auth/KeybladeSkai.jpg"
 import { MdInsertPhoto } from "react-icons/md";
 import { MdOutlineGifBox } from "react-icons/md";
 import { BiBorderBottom, BiPoll } from "react-icons/bi";
@@ -25,13 +25,13 @@ const PostPanel = ({ setPost, setShowPostPanel, showPostPanel }) => {
     media: "",
     name: `${userInfo.name}`,
     desc: "",
-    userName:`${userInfo.userName}`,
+    userName: `${userInfo.userName}`,
     likes: "0",
     comments: "0",
     shares: "",
     liked: "false",
-    profileImage: Itadori,
-    ownerId: "Skai",
+    profileImage: skai,
+    ownerId: `${userInfo.userName}`,
   });
 
   const handlePost = (e) => {
@@ -76,8 +76,8 @@ const PostPanel = ({ setPost, setShowPostPanel, showPostPanel }) => {
       comments: "12k",
       shares: "12k",
       liked: "false",
-      profileImage: Itadori,
-      ownerId: "Skai",
+      profileImage: skai,
+      ownerId: `${userInfo.userName}`,
     });
     if (mediaRef.current) {
       mediaRef.current.value = "";
@@ -108,7 +108,6 @@ const PostPanel = ({ setPost, setShowPostPanel, showPostPanel }) => {
         Visibility: showPostPanel ? "visible" : "hidden",
         top: 0,
         borderBottom: `1px solid rgba(47, 51, 54, var(--opacity))`,
-    
       }}
     >
       {showPostPanel && (
@@ -123,7 +122,7 @@ const PostPanel = ({ setPost, setShowPostPanel, showPostPanel }) => {
       <div className="w-[100%] justify-between">
         <div className="flex w-[100%] items-center justify-center">
           <img
-            src={Itadori}
+            src={skai}
             alt="profile picture"
             className="self-start image"
           />
@@ -159,8 +158,9 @@ const PostPanel = ({ setPost, setShowPostPanel, showPostPanel }) => {
                     src={mediaPreview}
                     alt="preview"
                     style={{ width: "100%" }}
-                    className=""
+                    className="h-[60vh] object-cover rounded-2xl"
                   />
+
                   <button
                     className="absolute top-2 right-1 bg-transparent"
                     onClick={removePicture}
