@@ -36,7 +36,7 @@ const InfoCard = () => {
   };
 
   return (
-    <div className="InfoCard shadow-md border-[1px] border-[#2F3336] border-opacity-55  bg-[--bg-color] text-[--primary-color] rounded-none w-[100%] h-[100vh]">
+    <div className="InfoCard shadow-md border-opacity-55  bg-[--bg-color] text-[--primary-color] rounded-none w-[100%] h-[100vh]">
       <div className="flex gap-6 items-center mb-8 ml-2">
         <Link to="/">
           <FaLongArrowAltLeft className="text-2xl" />
@@ -54,6 +54,9 @@ const InfoCard = () => {
 
       <div className="info">
         <span className="text-[--primary-color]">{userInfo.name}</span>
+      </div>
+      <div className="text-[14px]">
+        {userInfo.name ? `@${userInfo.name}` : "add your name"}
       </div>
 
       <div className="info ">
